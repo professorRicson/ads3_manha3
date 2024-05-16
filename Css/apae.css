@@ -1,5 +1,5 @@
 body{
-    background-image: url(backgroud.jpeg);
+    background-image: url(../img/backgroud.jpeg);
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
