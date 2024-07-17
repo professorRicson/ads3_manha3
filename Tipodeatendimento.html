@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/APAE-Horizontal-png.png" type="image/x-icon">
+    <title>Cadastro de Pacientes</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/Tipodeatendimento.css">
+</head>
+
+<body>
+    <header id="navbar-placeholder"></header>
+
+    <div class="card">
+        <img src="img/APAE-Horizontal-png.png" alt="APAE">
+        <div class="title-container">
+            <h1>APAE</h1>
+            <h2>Palmares-PE</h2>
+        </div>
+        <h3>Tipos de Atendimentos</h3>
+        <form action="#">
+            <div class="input-wrapper">
+                <span>Nome:</span>
+                <input type="text" name="firstname" placeholder="Digite o nome do paciente" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Sobrenome:</span>
+                <input type="text" name="lastname" placeholder="Digite o sobrenome do paciente" required>
+            </div>
+            <div class="grid-container">
+                <div class="column">
+                    <div class="input-wrapper">
+                        <span>Fisioterapia:</span>
+                        <div class="radio-group">
+                            <label><input type="radio" name="fisioterapia" value="sim" required> Sim</label>
+                            <label><input type="radio" name="fisioterapia" value="não" required> Não</label>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>Pintura:</span>
+                        <div class="radio-group">
+                            <label><input type="radio" name="pintura" value="sim" required> Sim</label>
+                            <label><input type="radio" name="pintura" value="não" required> Não</label>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>Musicoterapia:</span>
+                        <div class="radio-group">
+                            <label><input type="radio" name="musicoterapia" value="sim" required> Sim</label>
+                            <label><input type="radio" name="musicoterapia" value="não" required> Não</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="input-wrapper">
+                        <span>Psicologia:</span>
+                        <div class="radio-group">
+                            <label><input type="radio" name="psicologia" value="sim" required> Sim</label>
+                            <label><input type="radio" name="psicologia" value="não" required> Não</label>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>Psicopedagogia:</span>
+                        <div class="radio-group">
+                            <label><input type="radio" name="psicopedagogia" value="sim" required> Sim</label>
+                            <label><input type="radio" name="psicopedagogia" value="não" required> Não</label>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>Educação Física:</span>
+                        <div class="radio-group">
+                            <label><input type="radio" name="educacao_fisica" value="sim" required> Sim</label>
+                            <label><input type="radio" name="educacao_fisica" value="não" required> Não</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="login-link">Cadastrar</button>
+        </form>
+    </div>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/Tipodeatendimento.js"></script>
+</body>
+
+</html>
