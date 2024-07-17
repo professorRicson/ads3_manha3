@@ -1,13 +1,12 @@
 body {
-    font-family: Arial, sans-serif;
     background-image: url(../img/backgroud.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
 }
-
 
 main {
     display: flex;
@@ -32,9 +31,65 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s
 }
 
 .card h2 {
     font-size: 1.2em;
     color: #000;
+    margin: 0;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries para Responsividade */
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        height: 60px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+        max-width: 200px;
+        padding: 15px;
+        height: auto;
+    }
+
+    .card h2 {
+        font-size: 1em;
+    }
 }
