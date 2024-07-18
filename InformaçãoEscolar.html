@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/APAE-Horizontal-png.png" type="image/x-icon">
+    <title>Informação Escolar</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/InformaçãoEscolar.css">
+</head>
+
+<body>
+    <header id="navbar-placeholder"></header>
+
+    <div class="card">
+        <img src="img/APAE-Horizontal-png.png" alt="APAE">
+        <form action="#">
+            <div class="input-wrapper">
+                <span>O usuário está matriculado na rede regular de ensino?</span>
+                <div class="option-group">
+                    <label><input type="radio" name="matriculado" value="sim" required> Sim</label>
+                    <label><input type="radio" name="matriculado" value="não"> Não</label>
+                </div>
+            </div>
+            <div class="input-wrapper">
+                <span>A criança/adolescente possui mediador para auxiliar nas atividades dentro da escola?</span>
+                <div class="option-group">
+                    <label><input type="radio" name="mediador" value="sim" required> Sim</label>
+                    <label><input type="radio" name="mediador" value="não"> Não</label>
+                </div>
+            </div>
+            <div class="input-wrapper">
+                <span>Série:</span>
+                <input type="text" name="serie" placeholder="Digite a série" required>
+            </div>
+            <div class="input-wrapper">
+                <span>A escola é:</span>
+                <div class="option-group">
+                    <label><input type="radio" name="escola" value="particular" required> Particular</label>
+                    <label><input type="radio" name="escola" value="publica"> Pública</label>
+                </div>
+            </div>
+            <div class="input-wrapper">
+                <span>Nome da escola:</span>
+                <input type="text" name="nome_escola" placeholder="Digite o nome da escola" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Turno que estuda:</span>
+                <div class="option-group-vertical">
+                    <label><input type="radio" name="turno" value="manha" required> Manhã</label>
+                    <label><input type="radio" name="turno" value="tarde"> Tarde</label>
+                    <label><input type="radio" name="turno" value="noite"> Noite</label>
+                </div>
+            </div>
+            <button type="submit" class="login-link">Cadastrar</button>
+        </form>
+    </div>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/InformaçãoEscolar.js"></script>
+</body>
+
+</html>

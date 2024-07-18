@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/APAE-Horizontal-png.png" type="image/x-icon">
+    <title>Informações Socioeconômicas</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/InformacoesSocioeconomicas.css">
+</head>
+
+<body>
+    <header id="navbar-placeholder"></header>
+
+    <div class="card">
+        <img src="img/APAE-Horizontal-png.png" alt="APAE">
+        <div class="title">
+            <h1>APAE</h1>
+            <h2>Palmares-PE</h2>
+        </div>
+        <h3>Informações Socioeconômicas</h3>
+        <form action="#">
+            <div class="form-columns">
+                <div class="left-column">
+                    <div class="input-wrapper">
+                        <span>Composição familiar:</span>
+                        <input type="text" name="composicao_familiar" placeholder="Descreva a composição familiar" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>Valor componente familiar:</span>
+                        <input type="text" name="valor_componente_familiar" placeholder="Digite o valor" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>Recebe BPC?</span>
+                        <div class="option-group">
+                            <label><input type="radio" name="bpc" value="sim" required> Sim</label>
+                            <label><input type="radio" name="bpc" value="não"> Não</label>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>Recebe Bolsa Família?</span>
+                        <div class="option-group">
+                            <label><input type="radio" name="bolsa_familia" value="sim" required> Sim</label>
+                            <label><input type="radio" name="bolsa_familia" value="não"> Não</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <div class="input-wrapper">
+                        <span>Quantas pessoas trabalham:</span>
+                        <input type="text" name="pessoas_trabalham" placeholder="Digite o número de pessoas" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>Ao todo a renda familiar é:</span>
+                        <div class="option-group-renda">
+                            <div class="column">
+                                <label><input type="radio" name="renda_familiar" value="menor_que_um_sm" required> Menor que um s.m.</label>
+                                <label><input type="radio" name="renda_familiar" value="um_sm"> Um s.m.</label>
+                            </div>
+                            <div class="column">
+                                <label><input type="radio" name="renda_familiar" value="ate_dois_sm"> Até dois s.m.</label>
+                                <label><input type="radio" name="renda_familiar" value="maior_que_dois_sm"> Maior que dois s.m.</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>Residência:</span>
+                        <div class="option-group">
+                            <label><input type="radio" name="residencia" value="propria" required> Própria</label>
+                            <label><input type="radio" name="residencia" value="alugada"> Alugada</label>
+                            <label><input type="radio" name="residencia" value="cedida"> Cedida</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="login-link">Cadastrar</button>
+        </form>
+    </div>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/InformacoesSocioeconomicas.js"></script>
+</body>
+
+</html>
