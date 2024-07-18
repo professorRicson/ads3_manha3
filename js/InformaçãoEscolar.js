@@ -1,28 +1,15 @@
-function confirmaSenha() {
-    var passwordInput = document.getElementById("passwordInput2");
-    var togglePassword = document.querySelector(".toggle-password2");
-
-    if (passwordInput.type === "password") {
-        passwordInput.type = "text";
-        togglePassword.textContent = "Ocultar Senha";
+function handleResize() {
+    if (window.matchMedia("(max-width: 767px)").matches) {
+        document.body.classList.add("mobile");
+        document.body.classList.remove("desktop");
     } else {
-        passwordInput.type = "password";
-        togglePassword.textContent = "Mostrar Senha";
+        document.body.classList.add("desktop");
+        document.body.classList.remove("mobile");
     }
 }
 
-document.getElementById("passwordInput2").addEventListener("input", function () {
-    var password1 = document.getElementById("passwordInput").value;
-    var password2 = this.value;
-    var passwordError = document.getElementById("passwordError");
+// Executa a função ao carregar a página
+document.addEventListener("DOMContentLoaded", handleResize);
 
-    if (password1 !== password2) {
-        passwordError.textContent = "As senhas não coincidem!";
-    }
-    else if (password1 == password2) {
-        passwordError.textContent = "As senhas se coincidem"
-    }
-    else {
-        passwordError.textContent = "";
-    }
-});
+// Adiciona um listener para mudanças no tamanho da tela
+window.addEventListener("resize", handleResize);
