@@ -1,3 +1,4 @@
+/* Estilos globais */
 body {
     background-image: url(../img/backgroud.jpeg);
     background-size: cover;
@@ -5,12 +6,50 @@ body {
     background-repeat: no-repeat;
     margin: 0;
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Estilos da Navbar */
+header {
+    height: 60px; /* Ajuste o valor conforme o tamanho da navbar */
+    background-color: #333; /* Exemplo de cor para a navbar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Garante que a navbar fique acima do conteúdo */
+}
+
+header .menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+header .menu {
+    display: flex;
+}
+
+header .menu.closed {
+    display: none;
+}
+
+header .menu.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+}
+
+/* Estilos do card */
 .card {
     width: 90%;
     max-width: 600px;
@@ -19,45 +58,36 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     text-align: center;
-    margin: 20px;
+    margin: 125px auto 30px; /* Ajuste o margin-top para garantir que o card fique abaixo da navbar */
 }
 
 .card img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-.text-center {
-    margin-bottom: 20px;
+.card .text-center {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.text-center h1 {
-    margin: 0;
+.card .text-center h1 {
     font-size: 24px;
-}
-
-.text-center h2 {
     margin: 0;
-    font-size: 20px;
 }
 
-.text-center h3 {
+.card .text-center h2 {
+    font-size: 15px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.card .text-center h3 {
     margin: 0;
     font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.left-column, .right-column {
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 40px;
 }
 
 .card .input-wrapper {
@@ -72,36 +102,90 @@ body {
     color: #555;
 }
 
-.card input[type="text"] {
-    width: 100%;
+.card input[type="text"],
+.card input[type="radio"] {
+    width: calc(100% - 10px);
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
+    display: block;
+    margin: 0 auto;
 }
 
 .card .option-group {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.card .option-group-vertical {
+.card .option-group label {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.card .option-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+.card .option-group-renda {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: left;
+}
+
+.card .option-group-renda .column {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.card .option-group label,
-.card .option-group-vertical label {
+.card .option-group-renda label {
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.card .option-group-renda input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Estilos das colunas do formulário */
+.form-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.left-column,
+.right-column {
     width: 100%;
 }
 
-.card .option-group input[type="radio"],
+@media (min-width: 768px) {
+    .left-column,
+    .right-column {
+        width: 45%;
+    }
+}
+
+/* Estilos para os grupos de opções verticais */
+.card .option-group-vertical {
+    display: flex;
+    flex-direction: column; /* Mantém as opções em uma coluna */
+    align-items: flex-start; /* Alinha as opções ao início do contêiner */
+    margin-bottom: 20px;
+}
+
+.card .option-group-vertical label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
 .card .option-group-vertical input[type="radio"] {
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .card .login-link {
@@ -121,8 +205,30 @@ body {
     background-color: #0056b3;
 }
 
+/* Responsividade */
 @media (max-width: 767px) {
-    .grid-container {
-        grid-template-columns: 1fr;
+    header .menu-button {
+        display: block;
+    }
+
+    header .menu {
+        display: none;
+    }
+
+    header .menu.open {
+        display: flex;
+    }
+
+    .form-columns {
+        flex-direction: column;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card img {
+        width: 80px;
+        height: 80px;
     }
 }
