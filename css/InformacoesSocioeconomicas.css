@@ -6,19 +6,31 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    /* Ajuste a altura da navbar conforme necessário */
+    height: 60px; /* Ajuste o valor conforme o tamanho da navbar */
+    background-color: #333; /* Exemplo de cor para a navbar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Garante que a navbar fique acima do conteúdo */
 }
 
 .card {
-    width: 500px;
+    width: 90%; /* Ajuste para responsividade */
+    max-width: 600px;
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 80px auto 30px; /* Ajuste o valor do margin-top para garantir que a card fique abaixo da navbar */
+    position: relative; /* Permite ajustar a posição em relação ao seu pai */
 }
 
 .card img {
@@ -34,14 +46,15 @@ body {
 }
 
 .card .title h2 {
-    font-size: 18px;
+    font-size: 15px;
     margin: 0;
     margin-bottom: 20px;
 }
 
 .card h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
+    margin: 0;
+    font-size: 18px;
+    margin-bottom: 40px;
 }
 
 .card .input-wrapper {
@@ -68,8 +81,8 @@ body {
 
 .card .option-group {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
+    margin-bottom: 20px; /* Espaçamento entre grupos de opções */
 }
 
 .card .option-group label {
@@ -80,20 +93,6 @@ body {
 
 .card .option-group input[type="radio"] {
     margin-right: 5px;
-}
-
-.card .option-group input[type="radio"] + span {
-    margin-right: 0; /* Remove qualquer margem adicional à direita do texto */
-}
-
-.card .option-group-vertical {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.card .option-group-vertical label {
-    margin-bottom: 5px;
 }
 
 .card .option-group-renda {
@@ -122,16 +121,50 @@ body {
 .form-columns {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /* Permite que os itens se alinhem corretamente em telas menores */
 }
 
-.left-column,
+.left-column {
+    width: 100%; /* Ajuste para telas menores */
+}
+
 .right-column {
-    width: 45%;
+    width: 100%; /* Ajuste para telas menores */
+}
+
+.right-column .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.right-column .input-wrapper span {
+    margin-bottom: 10px;
+}
+
+.right-column .option-group-renda {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: left;
+}
+
+.right-column .option-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .left-column,
+    .right-column {
+        width: 45%; /* Ajuste para telas maiores */
+    }
 }
 
 .card .login-link {
     display: inline-block;
-    width: 45%;
+    width: 100%; /* Ajuste para responsividade */
     padding: 10px 0;
     border: none;
     border-radius: 10px;
