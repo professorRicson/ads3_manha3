@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Funcionários</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/listagem.css">
+    <link rel="shortcut icon" href="img/APAE-Horizontal-png.png" type="image/x-icon">
+</head>
+
+<body>
+    <header id="navbar-placeholder"></header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Funcionários Cadastrados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Sobrenome</th>
+                        <th>Email</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="userList">
+                    <!-- Lista de usuários será inserida aqui -->
+                </tbody>
+            </table>
+            <div class="actions">
+                <button onclick="location.href='cadastro.html'">Adicionar Novo Funcionário</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/listagem.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/checkLogin.js"></script>
+</body>
+
+</html>

@@ -1,3 +1,4 @@
+// Função para alternar a visibilidade da senha
 function togglePassword(inputId) {
     var passwordInput = document.getElementById(inputId);
     var togglePassword = passwordInput.nextElementSibling;
@@ -11,30 +12,38 @@ function togglePassword(inputId) {
     }
 }
 
+// Função para enviar o código de redefinição de senha
 function sendResetCode() {
     var email = document.getElementById("forgotPasswordEmail").value;
+    var storedUser = JSON.parse(localStorage.getItem('user'));
 
-    // Simulando o envio de um código de redefinição por email (substitua com sua lógica real)
-    var resetCode = generateResetCode(); // Função que gera um código de reset (pode ser aleatório)
+    if (storedUser && storedUser.email === email) {
+        var resetCode = generateResetCode(); // Gera um código de redefinição
+        localStorage.setItem('resetCode', resetCode); // Armazena o código no localStorage
 
-    // Exibindo a área para inserir o código de redefinição
-    document.getElementById("resetCodeArea").style.display = "block";
-
-    // Simulando o envio do código para o usuário (pode ser enviado por email)
-    console.log("Código de redefinição enviado para " + email + ": " + resetCode);
+        // Exibindo a área para inserir o código de redefinição
+        document.getElementById("resetCodeArea").style.display = "block";
+        
+        // Simulando o envio do código para o usuário (em um ambiente real, o código seria enviado por email)
+        console.log("Código de redefinição enviado para " + email + ": " + resetCode);
+    } else {
+        alert("Email não encontrado.");
+    }
 }
 
+// Função para gerar um código de redefinição
 function generateResetCode() {
-    // Função de exemplo para gerar um código de redefinição (pode ser aleatório)
     return Math.floor(1000 + Math.random() * 9000); // Gera um código de 4 dígitos
 }
 
+// Função para redefinir a senha
 function resetPassword() {
     var resetCode = document.getElementById("resetCodeInput").value;
     var newPassword = document.getElementById("newPasswordInput").value;
     var confirmNewPassword = document.getElementById("confirmNewPasswordInput").value;
     var resetPasswordError = document.getElementById("resetPasswordError");
     var resetSuccessMessage = document.getElementById("resetSuccessMessage");
+    var storedResetCode = localStorage.getItem('resetCode');
 
     // Validação simples para garantir que os campos não estejam vazios
     if (resetCode === "" || newPassword === "" || confirmNewPassword === "") {
@@ -48,15 +57,26 @@ function resetPassword() {
         return;
     }
 
+    // Verifica se o código de redefinição é válido
+    if (resetCode !== storedResetCode) {
+        resetPasswordError.textContent = "Código de redefinição inválido!";
+        return;
+    }
+
+    // Atualiza a senha do usuário no localStorage
+    var storedUser = JSON.parse(localStorage.getItem('user'));
+    if (storedUser) {
+        storedUser.password = newPassword;
+        localStorage.setItem('user', JSON.stringify(storedUser));
+    }
+
     // Simulação de sucesso na redefinição de senha
     resetPasswordError.textContent = "";
     resetSuccessMessage.style.display = "block";
     document.getElementById("resetCodeArea").style.display = "none";
 }
 
+// Função para voltar para a tela de login
 function returnToLogin() {
-    // Redireciona para a página de login
     window.location.href = "login.html";
 }
-
-

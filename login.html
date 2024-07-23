@@ -15,20 +15,20 @@
 
     <div class="card">
         <img src="img/APAE-Horizontal-png.png" alt="APAE">
-        <form action="#">
+        <form id="loginForm" onsubmit="login(event)">
             <div class="input-wrapper">
                 <span>Email institucional:</span>
-                <input type="email" name="email" placeholder="Digite seu email">
+                <input type="email" name="email" placeholder="Digite seu email" required>
             </div>
             <div class="input-wrapper">
                 <span>Senha:</span>
                 <div class="password-input">
-                    <input type="password" name="password" id="passwordInput" placeholder="Digite sua senha">
+                    <input type="password" name="password" id="passwordInput" placeholder="Digite sua senha" required>
                     <span class="toggle-password" onclick="togglePasswordVisibility()">Mostrar Senha</span>
                 </div>
             </div>
             <a href="cadastro.html" class="link">Cadastrar</a>
-            <a href="esqueceu_senha.html" class="link">Esqueceu sua senha ?</a>
+            <a href="esqueceu_senha.html" class="link">Esqueceu sua senha?</a>
             <button type="submit" class="login-link">Login</button>
         </form>
     </div>
