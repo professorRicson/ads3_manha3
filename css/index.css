@@ -5,41 +5,53 @@ body {
     background-repeat: no-repeat;
     margin: 0;
     font-family: Arial, sans-serif;
-    height: 100vh;
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
 }
 
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 120px); /* Altura da tela menos a altura do header */
+    padding: 200px 20px 20px 20px; /* Adiciona espaço no topo para evitar sobreposição com a navbar */
+    box-sizing: border-box; /* Inclui padding no cálculo da altura */
 }
 
 .card-container {
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap; /* Permite que os cards quebrem linha */
+    gap: 40px; /* Distância entre os cards */
+    justify-content: center; /* Centraliza os cards */
+    margin-top: 20px; /* Espaço adicional entre a navbar e os cards */
 }
 
 .card {
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    width: 200px;
-    height: 150px;
+    overflow: hidden;
+    width: 300px; /* Largura padrão */
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     border: none;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.card h2 {
-    font-size: 1.2em;
-    color: #000;
+.card img {
+    width: 100%;
+    border-radius: 0;
     margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.card p {
+    font-size: 1em;
+    color: #000;
+    margin: 15px; /* Espaçamento ao redor do texto */
+    padding: 0;
+    text-align: center; /* Centraliza o texto */
 }
 
 .card:hover {
@@ -48,48 +60,41 @@ main {
 }
 
 /* Media Queries para Responsividade */
-
 @media (max-width: 768px) {
     .card-container {
         flex-direction: column;
+        align-items: center; 
+        gap: 20px; /* Espaço reduzido para telas menores */
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
         align-items: center;
+        padding: 10px 20px 20px 20px; /* Adiciona espaço no topo para evitar sobreposição com a navbar */
+        box-sizing: border-box; /* Inclui padding no cálculo da altura */
     }
 
     .card {
-        width: 100%;
-        max-width: 300px;
+        width: 90%; /* Quase toda a largura disponível, mantendo margem */
+        max-width: 400px; /* Limite para evitar largura excessiva */
+        height: auto; /* Ajusta altura automaticamente */
     }
 
-    header {
-        flex-direction: column;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .logo img {
-        height: 60px;
-        margin-top: 10px;
+    .card p {
+        font-size: 0.95em; /* Texto levemente menor */
+        margin: 10px; /* Ajusta margens para manter espaçamento equilibrado */
     }
 }
 
 @media (max-width: 480px) {
     .card {
-        width: 100%;
-        max-width: 200px;
-        padding: 15px;
-        height: auto;
+        width: 95%; /* Usa quase toda a largura da tela */
+        max-width: 350px; /* Máximo de largura para evitar excesso em telas pequenas */
+        margin: 0 auto; /* Centraliza os cards */
     }
 
-    .card h2 {
-        font-size: 1em;
+    .card p {
+        font-size: 0.9em; /* Ajuste adicional para texto em dispositivos muito pequenos */
     }
 }
