@@ -5,23 +5,23 @@ body {
     background-repeat: no-repeat;
     margin: 0;
     font-family: Arial, sans-serif;
-    min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+    min-height: 100vh; 
 }
 
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 200px 20px 20px 20px; /* Adiciona espaço no topo para evitar sobreposição com a navbar */
-    box-sizing: border-box; /* Inclui padding no cálculo da altura */
+    padding: 200px 20px 20px 20px; 
+    box-sizing: border-box; 
 }
 
 .card-container {
     display: flex;
-    flex-wrap: wrap; /* Permite que os cards quebrem linha */
-    gap: 40px; /* Distância entre os cards */
-    justify-content: center; /* Centraliza os cards */
-    margin-top: 20px; /* Espaço adicional entre a navbar e os cards */
+    flex-wrap: wrap; 
+    gap: 40px; 
+    justify-content: center; 
+    margin-top: 20px; 
 }
 
 .card {
@@ -29,7 +29,7 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 300px; /* Largura padrão */
+    width: 300px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,11 +47,11 @@ main {
 }
 
 .card p {
-    font-size: 1em;
+    font-size: 1.3em;
     color: #000;
-    margin: 15px; /* Espaçamento ao redor do texto */
+    margin: 15px; 
     padding: 0;
-    text-align: center; /* Centraliza o texto */
+    text-align: center; 
 }
 
 .card:hover {
@@ -59,42 +59,42 @@ main {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Media Queries para Responsividade */
+
 @media (max-width: 768px) {
     .card-container {
         flex-direction: column;
         align-items: center; 
-        gap: 20px; /* Espaço reduzido para telas menores */
+        gap: 20px; 
     }
 
     main {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 10px 20px 20px 20px; /* Adiciona espaço no topo para evitar sobreposição com a navbar */
-        box-sizing: border-box; /* Inclui padding no cálculo da altura */
+        padding: 10px 20px 20px 20px; 
+        box-sizing: border-box; 
     }
 
     .card {
-        width: 90%; /* Quase toda a largura disponível, mantendo margem */
-        max-width: 400px; /* Limite para evitar largura excessiva */
-        height: auto; /* Ajusta altura automaticamente */
+        width: 90%; 
+        max-width: 400px; 
+        height: auto; 
     }
 
     .card p {
-        font-size: 0.95em; /* Texto levemente menor */
-        margin: 10px; /* Ajusta margens para manter espaçamento equilibrado */
+        font-size: 0.95em; 
+        margin: 10px; 
     }
 }
 
 @media (max-width: 480px) {
     .card {
-        width: 95%; /* Usa quase toda a largura da tela */
-        max-width: 350px; /* Máximo de largura para evitar excesso em telas pequenas */
-        margin: 0 auto; /* Centraliza os cards */
+        width: 95%; 
+        max-width: 350px; 
+        margin: 0 auto; 
     }
 
     .card p {
-        font-size: 0.9em; /* Ajuste adicional para texto em dispositivos muito pequenos */
+        font-size: 0.9em; 
     }
 }
