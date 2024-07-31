@@ -1,3 +1,4 @@
+/* Estilo geral do body */
 body {
     background-image: url(../img/backgroud.jpeg);
     background-size: cover;
@@ -6,21 +7,24 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     height: 100vh;
+    padding-top: 60px; /* Adiciona espaço suficiente para a navbar */
 }
 
+/* Estilo do card */
 .card {
-    width: 500px;
+    width: 90%; /* Ajuste a largura do card para se adaptar melhor em dispositivos menores */
+    max-width: 500px;
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     text-align: center;
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 0 auto; /* Centraliza o card horizontalmente */
+    position: relative; /* Removido o posicionamento absoluto */
+    top: 0; /* Remove a posição fixa vertical */
 }
 
+/* Estilo do wrapper de avatar */
 .card .avatar-wrapper {
     position: relative;
     margin-bottom: 20px;
@@ -35,6 +39,7 @@ body {
     margin: 0 auto;
 }
 
+/* Estilo do label de avatar */
 .card .avatar-label {
     display: inline-block;
     padding: 10px 20px;
@@ -49,6 +54,7 @@ body {
     background-color: #0056b3;
 }
 
+/* Estilo dos campos de input */
 .card .input-wrapper {
     margin-bottom: 15px;
     text-align: left;
@@ -84,6 +90,7 @@ body {
     margin: 0 auto;
 }
 
+/* Estilo dos campos em duplas */
 .card .duo-fields {
     display: flex;
     justify-content: space-between;
@@ -91,12 +98,12 @@ body {
 
 .card .duo-fields .input-field {
     width: calc(48% - 10px);
-    /* Ajuste conforme necessário */
 }
 
+/* Estilo do link de login */
 .card .login-link {
     display: inline-block;
-    width: 45%;
+    width: 100%; /* Faz o botão ocupar a largura total do card */
     padding: 10px 0;
     border: none;
     border-radius: 10px;
@@ -109,4 +116,23 @@ body {
 
 .card .login-link:hover {
     background-color: #0056b3;
+}
+
+/* Media queries para ajustar o layout em diferentes tamanhos de tela */
+@media (max-width: 768px) {
+    body {
+        padding-top: 200%; /* Aumenta o espaçamento superior para dispositivos móveis */
+    }
+
+    .card {
+        width: 95%; /* Ajusta a largura do card para se adaptar melhor em dispositivos menores */
+        padding: 20px; /* Ajusta o padding do card em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* Faz o card ocupar a largura total em telas muito pequenas */
+        padding: 15px; /* Ajusta o padding do card em telas muito pequenas */
+    }
 }

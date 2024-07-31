@@ -7,17 +7,30 @@
     <title>Navbar Apae</title>
 </head>
 <body>
+    <nav class="navbar" id="navbar-placeholder">
+        <!-- Navbar será injetada aqui via JS -->
+    </nav>
+    <main>
+        <nav class="navbar" id="navbar-placeholder">
+    <!-- Navbar será injetada aqui via JS -->
+</nav>
+<main>
     <nav class="navbar">
         <ul class="nav-links" id="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="cadastro.html">Cadastrar Pacientes</a></li>
+            <li><a href="cadastro.html">Cadastrar Funcionário</a></li>
             <li class="logo">
-                <a href="index.html">
+                <a href="admin.html">
                     <img src="img/APAE-Horizontal-png.png" alt="Logo">
                 </a>
             </li>
+            <!-- <li><a href="cadastro_paciente.html">Cadastrar Paciente</a></li> -->
             <li><a href="contato.html">Contato</a></li>
             <li><a href="sobre.html">Sobre</a></li>
+            <li id="login-placeholder"><a href="login.html">Login</a></li>
+            <li id="user-info" style="display: none;"></li>
+            <li id="logout" style="display: none;"><a href="#">Logout</a></li>
+
         </ul>
         <div class="burger" id="burger">
             <div class="line1"></div>
@@ -25,6 +38,9 @@
             <div class="line3"></div>
         </div>
     </nav>
+</main>
+
+            </main>
     <script src="js/navbar.js"></script>
 </body>
 </html>

@@ -22,8 +22,11 @@ function login(event) {
 
     if (user) {
         alert("Login bem-sucedido!");
-        window.location.href = "listagem.html";
+        // Remova ou substitua o redirecionamento por outra ação, se necessário
+        // window.location.href = "listagem.html";
     } else {
         alert("Email ou senha incorretos!");
     }
 }
+
+

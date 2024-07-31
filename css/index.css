@@ -12,7 +12,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 200px 20px 20px 20px; 
     box-sizing: border-box; 
 }
 
