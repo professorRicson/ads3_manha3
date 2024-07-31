@@ -80,6 +80,22 @@
 
     <script src="js/navbar.js"></script>
     <script src="js/InformacoesSocioeconomicas.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Recupera os dados do localStorage
+            var nomeUsuario = localStorage.getItem('nomeUsuario');
+            var cid = localStorage.getItem('cid');
+            var dataNascimento = localStorage.getItem('dataNascimento');
+            var nomeResponsavel = localStorage.getItem('nomeResponsavel');
+            var vinculoFamiliar = localStorage.getItem('vinculoFamiliar');
+            var telefone = localStorage.getItem('telefone');
+
+            // Pré-preenche os campos conforme necessário (se houver campos correspondentes)
+            if (nomeUsuario) document.querySelector('input[name="composicao_familiar"]').value = nomeUsuario;
+            if (cid) document.querySelector('input[name="valor_componente_familiar"]').value = cid;
+            // Adicione pré-preenchimento para outros campos conforme necessário
+        });
+    </script>
 </body>
 
 </html>
