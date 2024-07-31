@@ -1,28 +1,15 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const navbarPlaceholder = document.getElementById('navbar-placeholder');
-    if (navbarPlaceholder) {
-        navbarPlaceholder.innerHTML = `
-            <nav class="navbar">
-                <button class="menu-button">&#9776;</button> <!-- Botão de menu -->
-                <div class="menu closed">
-                    <a href="#">Home</a>
-                    <a href="#">Sobre</a>
-                    <a href="#">Contato</a>
-                </div>
-            </nav>
-        `;
+document.addEventListener('DOMContentLoaded', function () {
+    // Recupera os dados do localStorage
+    var composicaoFamiliar = localStorage.getItem('composicaoFamiliar');
+    var valorComponenteFamiliar = localStorage.getItem('valorComponenteFamiliar');
+    var bpc = localStorage.getItem('bpc');
+    var bolsaFamilia = localStorage.getItem('bolsaFamilia');
+    var pessoasTrabalham = localStorage.getItem('pessoasTrabalham');
+    var rendaFamiliar = localStorage.getItem('rendaFamiliar');
+    var residencia = localStorage.getItem('residencia');
 
-        const menuButton = document.querySelector('.menu-button');
-        const menu = document.querySelector('.menu');
-
-        menuButton.addEventListener('click', () => {
-            if (menu.classList.contains('closed')) {
-                menu.classList.remove('closed');
-                menu.classList.add('open');
-            } else {
-                menu.classList.remove('open');
-                menu.classList.add('closed');
-            }
-        });
-    }
+    // Pré-preenche os campos conforme necessário (se houver campos correspondentes)
+    if (composicaoFamiliar) document.querySelector('input[name="serie"]').value = composicaoFamiliar;
+    if (valorComponenteFamiliar) document.querySelector('input[name="nome_escola"]').value = valorComponenteFamiliar;
+    // Adicione pré-preenchimento para outros campos conforme necessário
 });

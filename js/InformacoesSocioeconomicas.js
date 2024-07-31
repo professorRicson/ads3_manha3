@@ -1,28 +1,24 @@
-function confirmaSenha() {
-    var passwordInput = document.getElementById("passwordInput2");
-    var togglePassword = document.querySelector(".toggle-password2");
+document.getElementById('socioeconomicForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Impede o envio do formulário
 
-    if (passwordInput.type === "password") {
-        passwordInput.type = "text";
-        togglePassword.textContent = "Ocultar Senha";
-    } else {
-        passwordInput.type = "password";
-        togglePassword.textContent = "Mostrar Senha";
-    }
-}
+    // Captura os dados do formulário
+    var composicaoFamiliar = document.querySelector('input[name="composicao_familiar"]').value;
+    var valorComponenteFamiliar = document.querySelector('input[name="valor_componente_familiar"]').value;
+    var bpc = document.querySelector('input[name="bpc"]:checked').value;
+    var bolsaFamilia = document.querySelector('input[name="bolsa_familia"]:checked').value;
+    var pessoasTrabalham = document.querySelector('input[name="pessoas_trabalham"]').value;
+    var rendaFamiliar = document.querySelector('input[name="renda_familiar"]:checked').value;
+    var residencia = document.querySelector('input[name="residencia"]:checked').value;
 
-document.getElementById("passwordInput2").addEventListener("input", function () {
-    var password1 = document.getElementById("passwordInput").value;
-    var password2 = this.value;
-    var passwordError = document.getElementById("passwordError");
+    // Armazena os dados no localStorage
+    localStorage.setItem('composicaoFamiliar', composicaoFamiliar);
+    localStorage.setItem('valorComponenteFamiliar', valorComponenteFamiliar);
+    localStorage.setItem('bpc', bpc);
+    localStorage.setItem('bolsaFamilia', bolsaFamilia);
+    localStorage.setItem('pessoasTrabalham', pessoasTrabalham);
+    localStorage.setItem('rendaFamiliar', rendaFamiliar);
+    localStorage.setItem('residencia', residencia);
 
-    if (password1 !== password2) {
-        passwordError.textContent = "As senhas não coincidem!";
-    }
-    else if (password1 == password2) {
-        passwordError.textContent = "As senhas se coincidem"
-    }
-    else {
-        passwordError.textContent = "";
-    }
+    // Redireciona para a página de informação escolar
+    window.location.href = 'InformaçãoEscolar.html';
 });
