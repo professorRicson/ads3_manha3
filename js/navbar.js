@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+
+// navbar.js
 document.addEventListener("DOMContentLoaded", function() {
     fetch('navbar.html')
         .then(response => response.text())
@@ -36,27 +38,29 @@ document.addEventListener("DOMContentLoaded", function() {
             // Verificação de login
             const loginPlaceholder = document.getElementById('login-placeholder');
             const userInfo = document.getElementById('user-info');
+            const userMenu = document.getElementById('user-menu');
+            const userName = document.getElementById('user-name');
+            const logout = document.getElementById('logout');
             const user = JSON.parse(localStorage.getItem("currentUser"));
 
             if (user) {
                 loginPlaceholder.style.display = 'none';
                 userInfo.style.display = 'block';
-                userInfo.textContent = `Olá, ${user.name}`;
+                userName.textContent = `Olá, ${user.name}`;
+                userMenu.style.display = 'block';
             } else {
                 loginPlaceholder.style.display = 'block';
                 userInfo.style.display = 'none';
+                userMenu.style.display = 'none';
+            }
+
+            if (logout) {
+                logout.addEventListener('click', () => {
+                    localStorage.removeItem('currentUser');
+                    window.location.reload();
+                });
             }
         })
         .catch(error => console.error('Error loading navbar:', error));
 });
-document.addEventListener("DOMContentLoaded", function() {
-    // Código existente...
 
-    const logout = document.getElementById('logout');
-    if (logout) {
-        logout.addEventListener('click', () => {
-            localStorage.removeItem('currentUser');
-            window.location.reload();
-        });
-    }
-});

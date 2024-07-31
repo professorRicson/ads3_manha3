@@ -70,15 +70,12 @@ document.addEventListener("DOMContentLoaded", function () {
     var avatarInput = document.getElementById('avatarInput');
     var avatarPreview = document.getElementById('avatarPreview');
 
-    // Quando um arquivo é selecionado
     avatarInput.addEventListener('change', function () {
         var file = avatarInput.files[0];
 
-        // Verifica se um arquivo foi selecionado
         if (file) {
             var reader = new FileReader();
 
-            // Define o evento de carregamento do arquivo
             reader.onload = function (e) {
                 avatarPreview.src = e.target.result; // Define o src da imagem para o arquivo carregado
                 avatarPreview.style.display = 'block'; // Exibe a imagem
