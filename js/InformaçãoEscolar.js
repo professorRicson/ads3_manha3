@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var rendaFamiliar = localStorage.getItem('rendaFamiliar');
     var residencia = localStorage.getItem('residencia');
 
-    // Pré-preenche os campos conforme necessário (se houver campos correspondentes)
+    // Pré-preenche os campos conforme necessário
     if (composicaoFamiliar) document.querySelector('input[name="serie"]').value = composicaoFamiliar;
     if (valorComponenteFamiliar) document.querySelector('input[name="nome_escola"]').value = valorComponenteFamiliar;
     // Adicione pré-preenchimento para outros campos conforme necessário
