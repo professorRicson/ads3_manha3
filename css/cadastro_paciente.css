@@ -21,7 +21,7 @@ body {
     text-align: center;
     margin: 0 auto; /* Centraliza o card horizontalmente */
     position: relative; /* Removido o posicionamento absoluto */
-    top: 0; /* Remove a posição fixa vertical */
+    top: 20px; /* Remove a posição fixa vertical */
 }
 
 /* Estilo do wrapper de avatar */

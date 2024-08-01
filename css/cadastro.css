@@ -22,7 +22,7 @@ body {
     text-align: center;
     margin: 0 auto; /* Centraliza o card horizontalmente */
     position: relative; /* Remove o posicionamento absoluto */
-    top: 0; /* Remove a posição fixa vertical */
+    top: 20px; /* Remove a posição fixa vertical */
     transform: none; /* Remove o efeito de transformação */
 }
 
