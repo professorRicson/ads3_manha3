@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,24 +9,43 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="shortcut icon" href="img/APAE-Horizontal-png.png" type="image/x-icon">
 </head>
+
 <body>
     <header id="navbar-placeholder"></header>
+
     <main>
+        <section class="carousel">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="img/slide1.jpg" alt="Slide 1">
+                    <img src="img/slide2.jpg" alt="Slide 2">
+                    <img src="img/slide3.jpg" alt="Slide 3">
+                    <img src="img/slide4.jpg" alt="Slide 4">
+                    <img src="img/slide5.jpg" alt="Slide 5">
+                    <img src="img/slide6.jpg" alt="Slide 6">
+                </div>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </section>
+
         <section class="card-container">
             <div class="card">
-                <img src="img/imagem1.png" alt="Imagem 1" class="card-img">
-                <p>Texto sobre a imagem 1 e descrição breve.</p>
+                <img src="img/imagem1.png" alt="Descrição da imagem 1">
             </div>
             <div class="card">
-                <img src="img/imagem2.png" alt="Imagem 2" class="card-img">
-                <p>O grupo que participou deste primeiro encontro é atendido pela Associação de Pais e Amigos dos Excepcionais (APAE-Palmares), e esteve no local junto com seus familiares e com representantes da entidade</p>
+                <img src="img/imagem2.png" alt="Descrição da imagem 2">
+                <p>O grupo que participou deste primeiro encontro é atendido pela Associação de Pais e Amigos dos Excepcionais (APAE-Palmares), e esteve no local junto com seus familiares e com representantes da entidade.</p>
             </div>
             <div class="card">
-                <img src="img/imagem3.png" alt="Imagem 3" class="card-img">
+                <img src="img/imagem3.png" alt="Descrição da imagem 3">
                 <p>Entrevista: APAE de Palmares, saiba o que é o que faz. - Blog do Sobrinho</p>
             </div>
         </section>
     </main>
     <script src="js/navbar.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
 </html>
