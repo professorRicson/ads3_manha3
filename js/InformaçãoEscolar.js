@@ -13,3 +13,16 @@ document.addEventListener('DOMContentLoaded', function () {
     if (valorComponenteFamiliar) document.querySelector('input[name="nome_escola"]').value = valorComponenteFamiliar;
     // Adicione pré-preenchimento para outros campos conforme necessário
 });
+
+document.getElementById('schoolForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio do formulário para processar o localStorage
+
+    // Salva os dados no localStorage
+    var formData = new FormData(event.target);
+    formData.forEach((value, key) => {
+        localStorage.setItem(key, value);
+    });
+
+    // Redireciona para a página de Tipos de Atendimento
+    window.location.href = 'Tipodeatendimento.html';
+});
