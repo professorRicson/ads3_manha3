@@ -5,15 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Esqueceu a senha?</title>
-    <link rel="shortcut icon" href="img/APAE-Horizontal-png.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/autismo_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/esqueceu_senha.css">
-    <style>
-        .error-message {
-            color: red;
-            font-size: 12px;
-            margin-top: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/rodape.css">
 </head>
 
 <body>
@@ -30,24 +24,28 @@
             <button type="button" onclick="sendResetCode()">Enviar código de redefinição</button>
         </form>
 
-        <!-- Área para inserir o código de redefinição -->
         <div id="resetCodeArea" style="display: none;">
             <form id="resetCodeForm">
                 <div class="input-wrapper">
                     <span>Código de verificação:</span>
-                    <input type="text" name="resetCode" id="resetCodeInput" placeholder="Digite o código recebido" required>
+                    <input type="text" name="resetCode" id="resetCodeInput" placeholder="Digite o código recebido"
+                        required>
                 </div>
                 <div class="input-wrapper">
                     <div class="password-input-group">
                         <div class="password-input">
                             <span>Nova senha:</span>
-                            <input type="password" name="newPassword" id="newPasswordInput" placeholder="Digite sua nova senha" required>
-                            <span class="toggle-password" onclick="togglePassword('newPasswordInput')">Mostrar Senha</span>
+                            <input type="password" name="newPassword" id="newPasswordInput"
+                                placeholder="Digite sua nova senha" required>
+                            <span class="toggle-password" onclick="togglePassword('newPasswordInput')">Mostrar
+                                Senha</span>
                         </div>
                         <div class="password-input">
                             <span>Confirmar nova senha:</span>
-                            <input type="password" name="confirmNewPassword" id="confirmNewPasswordInput" placeholder="Confirme sua nova senha" required>
-                            <span class="toggle-password" onclick="togglePassword('confirmNewPasswordInput')">Mostrar Senha</span>
+                            <input type="password" name="confirmNewPassword" id="confirmNewPasswordInput"
+                                placeholder="Confirme sua nova senha" required>
+                            <span class="toggle-password" onclick="togglePassword('confirmNewPasswordInput')">Mostrar
+                                Senha</span>
                         </div>
                     </div>
                 </div>
@@ -56,13 +54,14 @@
             </form>
         </div>
 
-        <!-- Mensagem de sucesso após redefinição de senha -->
         <div id="resetSuccessMessage" style="display: none;">
             <p>Sua senha foi atualizada com sucesso!</p>
             <button onclick="returnToLogin()">Voltar para a tela de login</button>
         </div>
     </div>
 
+    <div id="footer-placeholder"></div>
+    <script src="js/rodape.js"></script>
     <script src="js/esqueceu_senha.js"></script>
     <script src="js/navbar.js"></script>
 </body>

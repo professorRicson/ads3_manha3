@@ -1,9 +1,14 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     background-image: url(../img/backgroud.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin: 0;
+    background-attachment: fixed; /* Fixa a imagem de fundo durante o scroll */
     font-family: Arial, sans-serif;
 }
 
@@ -24,35 +29,22 @@ main {
     align-items: center;
     padding: 0;
     margin-top: 60px;
+    width: 100%;
 }
 
 .carousel {
     position: relative;
     width: 100%;
     overflow: hidden;
-    border: 5px solid transparent;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    animation: pulse 1.5s ease-in-out infinite;
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    }
-    50% {
-        box-shadow: 0 0 30px rgba(255, 0, 0, 0.7);
-    }
-    100% {
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    }
 }
 
 .carousel-container {
     position: relative;
     width: 100%;
-    height: 400px; /* Ajuste conforme necessário */
-    overflow: hidden; /* Garante que o excesso de imagens não seja visível */
+    height: 450px;
+    overflow: hidden;
 }
 
 .carousel-slide {
@@ -64,7 +56,7 @@ main {
 .carousel-slide img {
     width: 100%;
     height: auto;
-    flex-shrink: 0; /* Evita que as imagens encolham */
+    flex-shrink: 0;
 }
 
 .carousel-title {
@@ -72,45 +64,56 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background: linear-gradient(90deg, #f0d436, #274688, #267696, #d81a1a);
+    background-size: 200% 200%; /* Aumenta o tamanho do fundo para animar */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5em;
     padding: 10px 20px;
     border-radius: 10px;
     z-index: 1;
     text-align: center;
+    animation: gradient 6s linear infinite; /* Define a animação contínua */
+    text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.397); /* Adiciona a sombra ao texto */
 }
 
-.prev, .next {
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+
+.carousel-title span {
+    font-size: 2.0em;
+}
+
+.carousel-indicators {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #f9f871;
-    color: #fff;
-    border: none;
-    padding: 15px;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-indicator {
+    width: 12px;
+    height: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
     cursor: pointer;
-    border-radius: 100%;
-    font-size: 1.5em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s, box-shadow 0.3s;
+    transition: background-color 0.3s;
 }
 
-.prev {
-    left: 15px;
-}
-
-.next {
-    right: 15px;
-}
-
-.prev:hover, .next:hover {
-    background-color: #9fff8f;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-}
-
-.prev:focus, .next:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+.carousel-indicator.active {
+    background-color: #717171;
 }
 
 .card-container {
@@ -122,7 +125,7 @@ main {
 .card {
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
     padding: 20px;
     text-align: center;
     width: 400px;
@@ -150,7 +153,7 @@ main {
 
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Sombra mais destacada no hover */
 }
 
 @media (max-width: 768px) {
@@ -183,6 +186,15 @@ main {
         height: 60px;
         margin-top: 10px;
     }
+
+    .carousel-title {
+        font-size: 1.5em;
+    }
+
+    .carousel-subtitle {
+        font-size: 1em;
+        max-width: 90%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -195,5 +207,13 @@ main {
 
     .card p {
         font-size: 0.8em;
+    }
+
+    .carousel-title {
+        font-size: 1.2em;
+    }
+
+    .carousel-subtitle {
+        font-size: 0.9em;
     }
 }

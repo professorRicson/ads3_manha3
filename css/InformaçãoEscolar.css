@@ -11,6 +11,16 @@ body {
     flex-direction: column;
 }
 
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 /* Estilos da Navbar */
 header {
     height: 60px; /* Ajuste o valor conforme o tamanho da navbar */

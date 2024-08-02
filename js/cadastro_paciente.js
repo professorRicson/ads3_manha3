@@ -115,3 +115,24 @@ document.addEventListener("DOMContentLoaded", function () {
         return formatted;
     }
 });
+
+document.getElementById('cadastroForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Impede o envio do formulário
+
+    // Captura os dados do formulário
+    var nomeUsuario = document.querySelector('input[name="nome_usuario"]').value;
+    var cid = document.querySelector('input[name="cid"]').value;
+    var dataNascimento = document.querySelector('input[name="data_nascimento"]').value;
+    var nomeResponsavel = document.querySelector('input[name="nome_responsavel"]').value;
+    var vinculoFamiliar = document.querySelector('select[name="vinculo_familiar"]').value;
+    var telefone = document.querySelector('input[name="telefone"]').value;
+
+    localStorage.setItem('nomeUsuario', nomeUsuario);
+    localStorage.setItem('cid', cid);
+    localStorage.setItem('dataNascimento', dataNascimento);
+    localStorage.setItem('nomeResponsavel', nomeResponsavel);
+    localStorage.setItem('vinculoFamiliar', vinculoFamiliar);
+    localStorage.setItem('telefone', telefone);
+
+    window.location.href = 'InformacoesSocioeconomicas.html';
+});

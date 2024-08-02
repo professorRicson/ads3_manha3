@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/APAE-Horizontal-png.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/autismo_logo.png" type="image/x-icon">
     <title>Informações Socioeconômicas</title>
+    <link rel="stylesheet" href="css/rodape.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/InformacoesSocioeconomicas.css">
 </head>
@@ -25,7 +26,8 @@
                 <div class="left-column">
                     <div class="input-wrapper">
                         <span>Composição familiar:</span>
-                        <input type="text" name="composicao_familiar" placeholder="Descreva a composição familiar" required>
+                        <input type="text" name="composicao_familiar" placeholder="Descreva a composição familiar"
+                            required>
                     </div>
                     <div class="input-wrapper">
                         <span>Valor componente familiar:</span>
@@ -55,12 +57,15 @@
                         <span>Ao todo a renda familiar é:</span>
                         <div class="option-group-renda">
                             <div class="column">
-                                <label><input type="radio" name="renda_familiar" value="menor_que_um_sm" required> Menor que um s.m.</label>
+                                <label><input type="radio" name="renda_familiar" value="menor_que_um_sm" required> Menor
+                                    que um s.m.</label>
                                 <label><input type="radio" name="renda_familiar" value="um_sm"> Um s.m.</label>
                             </div>
                             <div class="column">
-                                <label><input type="radio" name="renda_familiar" value="ate_dois_sm"> Até dois s.m.</label>
-                                <label><input type="radio" name="renda_familiar" value="maior_que_dois_sm"> Maior que dois s.m.</label>
+                                <label><input type="radio" name="renda_familiar" value="ate_dois_sm"> Até dois
+                                    s.m.</label>
+                                <label><input type="radio" name="renda_familiar" value="maior_que_dois_sm"> Maior que
+                                    dois s.m.</label>
                             </div>
                         </div>
                     </div>
@@ -77,34 +82,10 @@
             <button type="submit" class="login-link">Cadastrar</button>
         </form>
     </div>
-
+    <div id="footer-placeholder"></div>
+    <script src="js/rodape.js"></script>
     <script src="js/navbar.js"></script>
-    <script>
-        document.getElementById('socioeconomicForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Impede o envio do formulário
-
-            // Captura os dados do formulário
-            var composicaoFamiliar = document.querySelector('input[name="composicao_familiar"]').value;
-            var valorComponenteFamiliar = document.querySelector('input[name="valor_componente_familiar"]').value;
-            var bpc = document.querySelector('input[name="bpc"]:checked').value;
-            var bolsaFamilia = document.querySelector('input[name="bolsa_familia"]:checked').value;
-            var pessoasTrabalham = document.querySelector('input[name="pessoas_trabalham"]').value;
-            var rendaFamiliar = document.querySelector('input[name="renda_familiar"]:checked').value;
-            var residencia = document.querySelector('input[name="residencia"]:checked').value;
-
-            // Armazena os dados no localStorage
-            localStorage.setItem('composicaoFamiliar', composicaoFamiliar);
-            localStorage.setItem('valorComponenteFamiliar', valorComponenteFamiliar);
-            localStorage.setItem('bpc', bpc);
-            localStorage.setItem('bolsaFamilia', bolsaFamilia);
-            localStorage.setItem('pessoasTrabalham', pessoasTrabalham);
-            localStorage.setItem('rendaFamiliar', rendaFamiliar);
-            localStorage.setItem('residencia', residencia);
-
-            // Redireciona para a página de informação escolar
-            window.location.href = 'InformaçãoEscolar.html';
-        });
-    </script>
+    <script src="js/InformacoesSocioeconomicas.js"></script>
 </body>
 
 </html>

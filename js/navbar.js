@@ -1,26 +1,6 @@
 // js/navbar.js
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('navbar.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('navbar-placeholder').innerHTML = data;
-
-            // Inicialização do menu hambúrguer
-            const burger = document.getElementById('burger');
-            const navLinks = document.getElementById('nav-links');
-
-            burger.addEventListener('click', () => {
-                navLinks.classList.toggle('nav-active');
-                burger.classList.toggle('toggle');
-            });
-        })
-        .catch(error => console.error('Error loading navbar:', error));
-});
-
-
-
-// navbar.js
-document.addEventListener("DOMContentLoaded", function() {
+    // Carregar o conteúdo da navbar dinamicamente
     fetch('navbar.html')
         .then(response => response.text())
         .then(data => {
@@ -47,13 +27,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 loginPlaceholder.style.display = 'none';
                 userInfo.style.display = 'block';
                 userName.textContent = `Olá, ${user.name}`;
-                userMenu.style.display = 'block';
             } else {
                 loginPlaceholder.style.display = 'block';
                 userInfo.style.display = 'none';
-                userMenu.style.display = 'none';
             }
 
+            // Logout handler
             if (logout) {
                 logout.addEventListener('click', () => {
                     localStorage.removeItem('currentUser');
@@ -63,4 +42,3 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .catch(error => console.error('Error loading navbar:', error));
 });
-

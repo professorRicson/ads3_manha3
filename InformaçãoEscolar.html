@@ -1,24 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/APAE-Horizontal-png.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/autismo_logo.png" type="image/x-icon">
     <title>Informação Escolar</title>
+    <link rel="stylesheet" href="css/rodape.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/InformaçãoEscolar.css">
-    <style>
-        .back-button {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: transparent;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-        }
-    </style>
 </head>
+
 <body>
     <header id="navbar-placeholder"></header>
 
@@ -42,7 +34,8 @@
                         </div>
                     </div>
                     <div class="input-wrapper">
-                        <span>A criança/adolescente possui mediador para auxiliar nas atividades dentro da escola?</span>
+                        <span>A criança/adolescente possui mediador para auxiliar nas atividades dentro da
+                            escola?</span>
                         <div class="option-group">
                             <label><input type="radio" name="mediador" value="sim" required> Sim</label>
                             <label><input type="radio" name="mediador" value="não"> Não</label>
@@ -79,35 +72,9 @@
         </form>
     </div>
     <script src="js/navbar.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Recupera os dados do localStorage
-            var composicaoFamiliar = localStorage.getItem('composicaoFamiliar');
-            var valorComponenteFamiliar = localStorage.getItem('valorComponenteFamiliar');
-            var bpc = localStorage.getItem('bpc');
-            var bolsaFamilia = localStorage.getItem('bolsaFamilia');
-            var pessoasTrabalham = localStorage.getItem('pessoasTrabalham');
-            var rendaFamiliar = localStorage.getItem('rendaFamiliar');
-            var residencia = localStorage.getItem('residencia');
-
-            // Pré-preenche os campos conforme necessário
-            if (composicaoFamiliar) document.querySelector('input[name="serie"]').value = composicaoFamiliar;
-            if (valorComponenteFamiliar) document.querySelector('input[name="nome_escola"]').value = valorComponenteFamiliar;
-            // Adicione pré-preenchimento para outros campos conforme necessário
-        });
-
-        document.getElementById('schoolForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Impede o envio do formulário para processar o localStorage
-
-            // Salva os dados no localStorage
-            var formData = new FormData(event.target);
-            formData.forEach((value, key) => {
-                localStorage.setItem(key, value);
-            });
-
-            // Redireciona para a página de Tipos de Atendimento
-            window.location.href = 'Tipodeatendimento.html';
-        });
-    </script>
+    <div id="footer-placeholder"></div>
+    <script src="js/rodape.js"></script>
+    <script src="js/InformaçãoEscolar.js"></script>
 </body>
+
 </html>

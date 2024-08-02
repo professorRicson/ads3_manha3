@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/APAE-Horizontal-png.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/autismo_logo.png" type="image/x-icon">
     <title>Cadastro de Matrícula</title>
+    <link rel="stylesheet" href="css/rodape.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/cadastro_paciente.css">
 </head>
@@ -66,32 +67,10 @@
         </form>
     </div>
 
+    <div id="footer-placeholder"></div>
+    <script src="js/rodape.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/cadastro_paciente.js"></script>
-    <script>
-        document.getElementById('cadastroForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Impede o envio do formulário
-
-            // Captura os dados do formulário
-            var nomeUsuario = document.querySelector('input[name="nome_usuario"]').value;
-            var cid = document.querySelector('input[name="cid"]').value;
-            var dataNascimento = document.querySelector('input[name="data_nascimento"]').value;
-            var nomeResponsavel = document.querySelector('input[name="nome_responsavel"]').value;
-            var vinculoFamiliar = document.querySelector('select[name="vinculo_familiar"]').value;
-            var telefone = document.querySelector('input[name="telefone"]').value;
-
-            // Armazena os dados no localStorage
-            localStorage.setItem('nomeUsuario', nomeUsuario);
-            localStorage.setItem('cid', cid);
-            localStorage.setItem('dataNascimento', dataNascimento);
-            localStorage.setItem('nomeResponsavel', nomeResponsavel);
-            localStorage.setItem('vinculoFamiliar', vinculoFamiliar);
-            localStorage.setItem('telefone', telefone);
-
-            // Redireciona para a página de informações socioeconômicas
-            window.location.href = 'InformacoesSocioeconomicas.html';
-        });
-    </script>
 </body>
 
 </html>

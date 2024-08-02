@@ -13,7 +13,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(90, 90, 231);
+    background: linear-gradient(90deg, #f0d436, #274688, #267696, #d81a1a); /* Gradiente de amarelo, verde, azul claro e branco */
     padding: 0 20px;
     height: 70px;
     position: fixed;
@@ -36,15 +36,18 @@ body {
 }
 
 .nav-links a {
-    color: #fff;
+    color: #FFFFFF; /* Branco */
     text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
 }
 
 .logo img {
-    height: 50px;
+    height: 60px;
     width: auto;
+    background-color: #FFFFFF; /* Branco */
+    border-radius: 50%;
+    padding: 5px; /* Adicionando padding para melhorar a aparência */
 }
 
 .burger {
@@ -58,7 +61,7 @@ body {
 .burger div {
     width: 25px;
     height: 3px;
-    background-color: #fff;
+    background-color: #FFFFFF; /* Branco */
 }
 
 .user-info {
@@ -66,7 +69,7 @@ body {
 }
 
 .user-info #user-name {
-    color: #fff;
+    color: #FFFFFF; /* Branco */
     cursor: pointer;
 }
 
@@ -75,7 +78,7 @@ body {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: rgb(70, 70, 210);
+    background-color: #87CEEB; /* Azul claro */
     list-style: none;
     padding: 10px;
     border-radius: 5px;
@@ -87,7 +90,7 @@ body {
 }
 
 .user-menu a {
-    color: #fff;
+    color: #FFFFFF; /* Branco */
     text-decoration: none;
     display: block;
     padding: 5px 10px;
@@ -103,9 +106,9 @@ body {
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 60px;
+        top: 70px; /* Ajustar para coincidir com a altura da navbar */
         left: 0;
-        background-color: rgb(90, 90, 231);
+        background: linear-gradient(90deg, #f8db36, #32CD32, #87CEEB, #ec3939); /* Gradiente */
     }
 
     .nav-links li {
@@ -123,5 +126,5 @@ body {
 }
 
 main {
-    margin-top: 60px;
+    margin-top: 70px; /* Ajustar para coincidir com a altura da navbar */
 }
