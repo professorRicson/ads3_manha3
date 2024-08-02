@@ -1,25 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var avatarInput = document.getElementById('avatarInput');
-    var avatarPreview = document.getElementById('avatarPreview');
-
-    avatarInput.addEventListener('change', function () {
-        var file = avatarInput.files[0];
-
-        if (file) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                avatarPreview.src = e.target.result;
-                avatarPreview.style.display = 'block';
-            };
-
-            reader.readAsDataURL(file);
-        } else {
-            avatarPreview.src = 'img/avatar-placeholder.png';
-            avatarPreview.style.display = 'none';
-        }
-    });
-
     var telefoneInput = document.querySelector('input[name="telefone"]');
 
     telefoneInput.addEventListener('input', function () {
