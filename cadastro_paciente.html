@@ -15,10 +15,7 @@
     <header id="navbar-placeholder"></header>
 
     <div class="card">
-        <div class="avatar-wrapper">
-            <label for="avatarInput" class="avatar-label">Carregar Foto</label>
-            <input type="file" id="avatarInput" name="avatar" accept="image/*" style="display: none;">
-        </div>
+        <img src="img/APAE-Horizontal-png.png" alt="APAE">
         <form id="cadastroForm" action="#">
             <div class="input-wrapper">
                 <div class="name-fields">
@@ -58,9 +55,8 @@
                 </div>
                 <div class="input-field">
                     <span>Telefone:</span>
-                    <input type="tel" name="telefone" placeholder="(DDD) 99999-9999"
-                        pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}" title="Digite um telefone válido (DDD) 99999-9999"
-                        required>
+                    <input type="tel" name="telefone" placeholder="(DD) 99999-9999" pattern="\([0-9]{2}\) 9[0-9]{4}-[0-9]{4}"
+                        title="Digite um telefone válido (DD) 99999-9999" required>
                 </div>
             </div>
             <button type="submit" class="login-link">Cadastrar</button>
