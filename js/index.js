@@ -2,6 +2,8 @@ let slideIndex = 0;
 showSlides();
 createIndicators();
 
+window.addEventListener('resize', showSlides);
+
 function showSlides() {
     const slides = document.querySelectorAll('.carousel-slide img');
     const indicators = document.querySelectorAll('.carousel-indicator');
