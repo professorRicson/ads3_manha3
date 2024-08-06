@@ -1,0 +1,92 @@
+/* estilos gerais */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-size: 16px; /* Tamanho base da fonte */
+}
+
+body {
+    background-image: url(../img/backgroud.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+/* estilos do header */
+header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* estilos principais */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin-top: 60px;
+    width: 100%;
+}
+
+/* seção sobre */
+.about-section {
+    background-color: #ffffff83; /* Cor de fundo branca */
+    padding: 20px; /* Padding para espaçamento interno */
+    margin: 0; /* Remove margens externas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para destaque */
+    text-align: center;
+    width: 100%; /* Garante que a seção ocupe toda a largura da tela */
+    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+}
+
+.about-title {
+    font-size: 2.5em;
+    color: #1a1a1a; /* Cor do texto */
+    margin: 0;
+    padding: 10px 0; /* Padding para espaçamento interno do título */
+    background: linear-gradient(90deg, #f0d436, #274688, #267696, #d81a1a);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.397);
+    animation: gradient 6s linear infinite;
+}
+
+.about-title span {
+    font-size: 2.0em;
+}
+
+.about-content {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #000;
+}
+
+.about-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-content ul li {
+    margin: 5px 0;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
