@@ -69,6 +69,17 @@ header {
     color: #555;
 }
 
+.card .input-wrapper select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px; /* Espaçamento abaixo do select */
+    font-size: 14px;
+    color: #555;
+}
+
+
 .card input[type="text"],
 .card input[type="radio"] {
     width: calc(100% - 10px);

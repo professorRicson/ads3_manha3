@@ -55,19 +55,12 @@
                     </div>
                     <div class="input-wrapper">
                         <span>Ao todo a renda familiar é:</span>
-                        <div class="option-group-renda">
-                            <div class="column">
-                                <label><input type="radio" name="renda_familiar" value="menor_que_um_sm" required> Menor
-                                    que um s.m.</label>
-                                <label><input type="radio" name="renda_familiar" value="um_sm"> Um s.m.</label>
-                            </div>
-                            <div class="column">
-                                <label><input type="radio" name="renda_familiar" value="ate_dois_sm"> Até dois
-                                    s.m.</label>
-                                <label><input type="radio" name="renda_familiar" value="maior_que_dois_sm"> Maior que
-                                    dois s.m.</label>
-                            </div>
-                        </div>
+                        <select name="renda_familiar" required>
+                            <option value="menor_que_um_sm">Menor que um s.m.</option>
+                            <option value="um_sm">Um s.m.</option>
+                            <option value="ate_dois_sm">Até dois s.m.</option>
+                            <option value="maior_que_dois_sm">Maior que dois s.m.</option>
+                        </select>
                     </div>
                     <div class="input-wrapper">
                         <span>Residência:</span>
