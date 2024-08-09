@@ -166,6 +166,35 @@ header {
     margin-bottom: 10px;
 }
 
+.container {
+    position: relative;
+}
+
+.back-arrow {
+    position: absolute;
+    top: -100px;
+    left: 10px;
+}
+
+.back-arrow a {
+    text-decoration: none;
+    font-size: 32px;
+    color: #000; /* Altere a cor conforme necessário */
+}
+
+/* styles.css */
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #f1f1f1;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
 @media (min-width: 768px) {
     .left-column,
     .right-column {
