@@ -1,3 +1,31 @@
+// Recupera e preenche os dados ao carregar a página
+document.addEventListener('DOMContentLoaded', function () {
+    var fields = ['matriculado', 'mediador', 'serie', 'escola', 'nome_escola', 'turno'];
+    fields.forEach(function (field) {
+        var value = localStorage.getItem(field);
+        if (value) {
+            var input = document.querySelector(`input[name="${field}"][value="${value}"]`);
+            if (input) input.checked = true;
+            else document.querySelector(`input[name="${field}"]`).value = value;
+        }
+    });
+});
+
+// Salva os dados no localStorage ao submeter o formulário
+document.getElementById('schoolForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var formData = new FormData(event.target);
+    formData.forEach((value, key) => {
+        localStorage.setItem(key, value);
+    });
+    window.location.href = 'Tipodeatendimento.html';
+});
+
+// Mantém os dados ao voltar para a página anterior
+document.querySelector('.back-arrow a').addEventListener('click', function() {
+    history.back(); // Volta para a página anterior mantendo os dados no localStorage
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     // Recupera os dados do localStorage
     var composicaoFamiliar = localStorage.getItem('composicaoFamiliar');

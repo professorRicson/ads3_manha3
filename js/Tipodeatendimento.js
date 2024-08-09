@@ -1,34 +1,27 @@
+// Recupera e preenche os dados ao carregar a página
 document.addEventListener('DOMContentLoaded', function () {
-    // Recupera os dados do localStorage
-    var data = {
-        firstname: localStorage.getItem('firstname'),
-        lastname: localStorage.getItem('lastname'),
-        fisioterapia: localStorage.getItem('fisioterapia'),
-        pintura: localStorage.getItem('pintura'),
-        musicoterapia: localStorage.getItem('musicoterapia'),
-        psicologia: localStorage.getItem('psicologia'),
-        psicopedagogia: localStorage.getItem('psicopedagogia'),
-        educacao_fisica: localStorage.getItem('educacao_fisica')
-    };
-
-    // Preenche os campos do formulário
-    Object.keys(data).forEach(key => {
-        if (data[key]) {
-            const field = document.querySelector(`input[name="${key}"][value="${data[key]}"]`);
-            if (field) field.checked = true;
+    var fields = ['firstname', 'lastname', 'fisioterapia', 'pintura', 'musicoterapia', 'psicologia', 'psicopedagogia', 'educacao_fisica'];
+    fields.forEach(function (field) {
+        var value = localStorage.getItem(field);
+        if (value) {
+            var input = document.querySelector(`input[name="${field}"][value="${value}"]`);
+            if (input) input.checked = true;
+            else document.querySelector(`input[name="${field}"]`).value = value;
         }
     });
 });
 
+// Salva os dados no localStorage ao submeter o formulário
 document.getElementById('patientForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Impede o envio do formulário para processar o localStorage
-
-    // Salva os dados no localStorage
+    event.preventDefault();
     var formData = new FormData(event.target);
     formData.forEach((value, key) => {
         localStorage.setItem(key, value);
     });
-
-    // Opcional: Redirecionar ou exibir uma mensagem de sucesso
     alert('Dados salvos com sucesso!');
+});
+
+// Mantém os dados ao voltar para a página anterior
+document.querySelector('.back-arrow a').addEventListener('click', function() {
+    history.back(); // Volta para a página anterior mantendo os dados no localStorage
 });

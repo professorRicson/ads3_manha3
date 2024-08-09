@@ -95,6 +95,34 @@ body {
     background-color: #0056b3;
 }
 
+.container {
+    position: relative;
+}
+
+.back-arrow {
+    position: absolute;
+    top: -100px;
+    left: 10px;
+}
+
+.back-arrow a {
+    text-decoration: none;
+    font-size: 32px;
+    color: #000; /* Altere a cor conforme necessário */
+}
+
+/* styles.css */
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #f1f1f1;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
 /* Media queries para ajustar o layout em diferentes tamanhos de tela */
 @media (max-width: 768px) {
     body {
