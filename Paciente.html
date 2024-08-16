@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/autismo_logo.png" type="image/x-icon">
+    <title>Cadastro de Matrícula</title>
+    <link rel="stylesheet" href="css/rodape.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/cadastro_paciente.css">
+    <link rel="stylesheet" href="css/InformacoesSocioeconomicas.css">
+    <link rel="stylesheet" href="css/Tipodeatendimento.css">
+    <link rel="stylesheet" href="css/InformaçãoEscolar.css">
+</head>
+
+<body>
+    <header id="navbar-placeholder"></header>
+
+    <div class="card">
+        <img src="img/APAE-Horizontal-png.png" alt="APAE">
+        <div class="container">
+            <!-- Seta de voltar -->
+            <div class="back-arrow">
+                <a href="login.html">&#x02190;</a>
+            </div>
+        </div>
+
+        <form id="combinedForm" action="#">
+            <!-- Cadastro de Paciente -->
+            <h1>Cadastro de Paciente</h1>
+            <div class="input-wrapper">
+                <div class="name-fields">
+                    <div class="input-field">
+                        <span>Nome do Usuário:</span>
+                        <input type="text" name="nome_usuario" placeholder="Digite o nome do usuário" required>
+                    </div>
+                </div>
+            </div>
+            <div class="input-wrapper">
+                <span>CID:</span>
+                <input type="text" name="cid" placeholder="Digite o CID" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Data de Nascimento:</span>
+                <input type="date" name="data_nascimento" required>
+            </div>
+            <div class="input-wrapper">
+                <div class="name-fields">
+                    <div class="input-field">
+                        <span>Nome do Responsável:</span>
+                        <input type="text" name="nome_responsavel" placeholder="Digite o nome do responsável" required>
+                    </div>
+                </div>
+            </div>
+            <div class="input-wrapper duo-fields">
+                <div class="input-field">
+                    <span>Vínculo Familiar:</span>
+                    <select name="vinculo_familiar" required>
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="mae">Mãe</option>
+                        <option value="pai">Pai</option>
+                        <option value="irmao">Irmão(ã)</option>
+                        <option value="tio">Tio(a)</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <span>Telefone:</span>
+                    <input type="tel" name="telefone" placeholder="(DD) 99999-9999" pattern="\([0-9]{2}\) 9[0-9]{4}-[0-9]{4}"
+                        title="Digite um telefone válido (DD) 99999-9999" required>
+                </div>
+            </div>
+
+            <!-- Informações Socioeconômicas -->
+            <h2>Informações Socioeconômicas</h2>
+            <div class="form-columns">
+                <div class="left-column">
+                    <div class="input-wrapper">
+                        <span>Composição familiar:</span>
+                        <input type="text" name="composicao_familiar" placeholder="Descreva a composição familiar" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>Valor componente familiar:</span>
+                        <input type="text" name="valor_componente_familiar" placeholder="Digite o valor" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>Recebe BPC?</span>
+                        <div class="option-group">
+                            <label><input type="radio" name="bpc" value="sim" required> Sim</label>
+                            <label><input type="radio" name="bpc" value="não"> Não</label>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>Recebe Bolsa Família?</span>
+                        <div class="option-group">
+                            <label><input type="radio" name="bolsa_familia" value="sim" required> Sim</label>
+                            <label><input type="radio" name="bolsa_familia" value="não"> Não</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <div class="input-wrapper">
+                        <span>Quantas pessoas trabalham:</span>
+                        <input type="text" name="pessoas_trabalham" placeholder="Digite o número de pessoas" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>Ao todo a renda familiar é:</span>
+                        <select name="renda_familiar" required>
+                            <option value="menor_que_um_sm">Menor que um s.m.</option>
+                            <option value="um_sm">Um s.m.</option>
+                            <option value="ate_dois_sm">Até dois s.m.</option>
+                            <option value="maior_que_dois_sm">Maior que dois s.m.</option>
+                        </select>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>Residência:</span>
+                        <div class="option-group">
+                            <label><input type="radio" name="residencia" value="propria" required> Própria</label>
+                            <label><input type="radio" name="residencia" value="alugada"> Alugada</label>
+                            <label><input type="radio" name="residencia" value="cedida"> Cedida</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informação Escolar -->
+            <h2>Informação Escolar</h2>
+            <div class="form-columns">
+                <div class="left-column">
+                    <div class="input-wrapper">
+                        <span>O usuário está matriculado na rede regular de ensino?</span>
+                        <div class="option-group">
+                            <label><input type="radio" name="matriculado" value="sim" required> Sim</label>
+                            <label><input type="radio" name="matriculado" value="não"> Não</label>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>A criança/adolescente possui mediador para auxiliar nas atividades dentro da escola?</span>
+                        <div class="option-group">
+                            <label><input type="radio" name="mediador" value="sim" required> Sim</label>
+                            <label><input type="radio" name="mediador" value="não"> Não</label>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>Série:</span>
+                        <input type="text" name="serie" placeholder="Digite a série" required>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <div class="input-wrapper">
+                        <span>A escola é:</span>
+                        <div class="option-group">
+                            <label><input type="radio" name="escola" value="particular" required> Particular</label>
+                            <label><input type="radio" name="escola" value="publica"> Pública</label>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>Nome da escola:</span>
+                        <input type="text" name="nome_escola" placeholder="Digite o nome da escola" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>Turno que estuda:</span>
+                        <div class="option-group-vertical">
+                            <label><input type="radio" name="turno" value="manha" required> Manhã</label>
+                            <label><input type="radio" name="turno" value="tarde"> Tarde</label>
+                            <label><input type="radio" name="turno" value="noite"> Noite</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tipos de Atendimentos -->
+            <h2>Tipos de Atendimentos</h2>
+            <div class="input-wrapper">
+                <span>Nome:</span>
+                <input type="text" name="firstname" placeholder="Digite o nome do paciente" required>
+            </div>
+            <div class="input-wrapper">
+                <span>Sobrenome:</span>
+                <input type="text" name="lastname" placeholder="Digite o sobrenome do paciente" required>
+            </div>
+            <div class="grid-container">
+                <div class="column">
+                    <div class="input-wrapper">
+                        <span>Fisioterapia:</span>
+                        <div class="radio-group">
+                            <label><input type="radio" name="fisioterapia" value="sim" required> Sim</label>
+                            <label><input type="radio" name="fisioterapia" value="nao"> Não</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="input-wrapper">
+                        <span>Psicologia:</span>
+                        <div class="radio-group">
+                            <label><input type="radio" name="psicologia" value="sim" required> Sim</label>
+                            <label><input type="radio" name="psicologia" value="nao"> Não</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="input-wrapper">
+                        <span>Fonoaudiologia:</span>
+                        <div class="radio-group">
+                            <label><input type="radio" name="fonoaudiologia" value="sim" required> Sim</label>
+                            <label><input type="radio" name="fonoaudiologia" value="nao"> Não</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="input-wrapper">
+                        <span>Oficina de Arteterapia:</span>
+                        <div class="radio-group">
+                            <label><input type="radio" name="arteterapia" value="sim" required> Sim</label>
+                            <label><input type="radio" name="arteterapia" value="nao"> Não</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="input-wrapper">
+                        <span>Atendimento Social:</span>
+                        <div class="radio-group">
+                            <label><input type="radio" name="atendimento_social" value="sim" required> Sim</label>
+                            <label><input type="radio" name="atendimento_social" value="nao"> Não</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="input-wrapper">
+                        <span>Nutrição:</span>
+                        <div class="radio-group">
+                            <label><input type="radio" name="nutricao" value="sim" required> Sim</label>
+                            <label><input type="radio" name="nutricao" value="nao"> Não</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botão de Enviar -->
+            <button type="submit" class="submit-button">Enviar</button>
+        </form>
+    </div>
+
+    <footer id="rodape-placeholder"></footer>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/rodape.js"></script>
+    <script src="js/cadastro_paciente.js"></script>
+    <script src="js/InformacoesSocioeconomicas.js"></script>
+    <script src="js/Tipodeatendimento.js"></script>
+    <script src="js/InformaçãoEscolar.js"></script>
+</body>
+
+</html>
