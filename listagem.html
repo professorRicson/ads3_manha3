@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - Funcionários</title>
+    <title>Admin - Funcionários e Pacientes</title>
     <link rel="stylesheet" href="css/rodape.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/listagem.css">
@@ -27,19 +27,33 @@
                     </tr>
                 </thead>
                 <tbody id="userList">
-                    <tr>
-                        <td data-label="Nome">João</td>
-                        <td data-label="Sobrenome">Silva</td>
-                        <td data-label="Email">joao.silva@example.com</td>
-                        <td data-label="Ações">
-                            <button class="edit-button">Editar</button>
-                            <button class="delete-button">Excluir</button>
-                        </td>
-                    </tr>
+                    <!-- Conteúdo preenchido via JavaScript -->
                 </tbody>
             </table>
             <div class="actions">
                 <button onclick="location.href='cadastro.html'">Adicionar Novo Funcionário</button>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Pacientes Cadastrados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>CID</th>
+                        <th>Data de Nascimento</th>
+                        <th>Nome do Responsável</th>
+                        <th>Vínculo Familiar</th>
+                        <th>Telefone</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="patientList">
+                    <!-- Conteúdo preenchido via JavaScript -->
+                </tbody>
+            </table>
+            <div class="actions">
                 <button onclick="location.href='cadastro_paciente.html'">Adicionar Novo Paciente</button>
             </div>
         </section>
