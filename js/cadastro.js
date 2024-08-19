@@ -12,15 +12,15 @@ function senha() {
 }
 
 function confirmaSenha() {
-    var passwordInput = document.getElementById("passwordInput2");
-    var togglePassword = document.querySelector(".toggle-password2");
+    var passwordInput2 = document.getElementById("passwordInput2");
+    var togglePassword2 = document.querySelector(".toggle-password2");
 
-    if (passwordInput.type === "password") {
-        passwordInput.type = "text";
-        togglePassword.textContent = "Ocultar Senha";
+    if (passwordInput2.type === "password") {
+        passwordInput2.type = "text";
+        togglePassword2.textContent = "Ocultar Senha";
     } else {
-        passwordInput.type = "password";
-        togglePassword.textContent = "Mostrar Senha";
+        passwordInput2.type = "password";
+        togglePassword2.textContent = "Mostrar Senha";
     }
 }
 

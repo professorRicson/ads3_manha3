@@ -19,7 +19,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     text-align: center;
-    margin: 0 auto; /* Centraliza o card horizontalmente */
+    margin: 100px auto; /* Centraliza o card horizontalmente */
     position: relative; /* Remove o posicionamento absoluto */
     top: 0; /* Remove o posicionamento vertical fixo */
     transform: none; /* Remove o efeito de transformação */

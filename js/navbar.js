@@ -1,9 +1,8 @@
-// js/navbar.js
 document.addEventListener("DOMContentLoaded", function () {
   // Carregar o conteúdo da navbar dinamicamente
   fetch("navbar.html")
-    .then((response) => response.text())
-    .then((data) => {
+    .then(response => response.text())
+    .then(data => {
       document.getElementById("navbar-placeholder").innerHTML = data;
 
       // Inicialização do menu hambúrguer
@@ -18,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
       // Verificação de login
       const loginPlaceholder = document.getElementById("login-placeholder");
       const userInfo = document.getElementById("user-info");
-      const userMenu = document.getElementById("user-menu");
       const userName = document.getElementById("user-name");
       const logout = document.getElementById("logout");
       const user = JSON.parse(localStorage.getItem("currentUser"));
@@ -26,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (user) {
         loginPlaceholder.style.display = "none";
         userInfo.style.display = "block";
-        userName.textContent = `Olá, ${user.name}`;
+        userName.textContent = `Olá, ${user.firstname} ${user.lastname}`;
       } else {
         loginPlaceholder.style.display = "block";
         userInfo.style.display = "none";
@@ -40,5 +38,5 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       }
     })
-    .catch((error) => console.error("Error loading navbar:", error));
+    .catch(error => console.error("Error loading navbar:", error));
 });
