@@ -1,3 +1,4 @@
+/* Estilo geral do body */
 body {
     background-image: url(../img/backgroud.jpeg);
     background-size: cover;
@@ -5,39 +6,34 @@ body {
     background-repeat: no-repeat;
     margin: 0;
     font-family: Arial, sans-serif;
-    height: 100vh;
+    padding-top: 70px; /* Espaço suficiente para a navbar fixa */
+    min-height: 100vh; /* Garante que a página ocupe pelo menos 100% da altura da viewport */
+    display: flex;
+    flex-direction: column;
 }
 
+/* Estilo do card */
 .card {
-    width: 500px;
+    width: 90%; /* Ajusta a largura do card para se adaptar em dispositivos menores */
+    max-width: 500px;
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     text-align: center;
-    position: absolute;
-    top: 58%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 20px auto; /* Centraliza o card horizontalmente e adiciona espaço acima e abaixo */
+    position: relative; /* Remove o posicionamento absoluto */
 }
 
+/* Estilo da imagem do card */
 .card img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.card h2 {
-    font-size: 24px;
     margin-bottom: 20px;
-    color: #333;
 }
 
-.card form {
-    margin-top: 20px;
-}
-
+/* Estilo do wrapper de input */
 .card .input-wrapper {
     margin-bottom: 15px;
     text-align: left;
@@ -50,10 +46,11 @@ body {
     color: #555;
 }
 
+/* Estilo dos campos de input */
 .card input[type="email"],
 .card input[type="password"],
 .card input[type="text"] {
-    width: calc(100% - 10px);
+    width: calc(100% - 20px); /* Ajusta a largura do campo de input */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -62,16 +59,7 @@ body {
     margin: 0 auto;
 }
 
-.card .password-input-group {
-    display: flex;
-    justify-content: space-between;
-}
-
-.card .password-input {
-    width: calc(50% - 10px);
-    position: relative;
-}
-
+/* Estilo do botão de mostrar/esconder senha */
 .card .toggle-password {
     display: block;
     text-align: right;
@@ -81,12 +69,7 @@ body {
     margin-top: 5px;
 }
 
-.card .error-message {
-    color: red;
-    font-size: 12px;
-    margin-top: 5px;
-}
-
+/* Estilo do botão de ação */
 .card button {
     display: inline-block;
     width: 100%;
@@ -105,71 +88,34 @@ body {
     background-color: #0056b3;
 }
 
-
-#resetCodeArea {
-    display: none;
-    /* Inicialmente oculto */
+/* Ajuste do espaço inferior */
+main {
+    flex: 1; /* Permite que o main expanda para ocupar o espaço disponível */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
 }
 
-#resetCodeArea.active {
-    display: block;
-    /* Mostra quando ativado */
-    margin-top: 20px;
-    /* Espaço acima */
-    border-top: 1px solid #ccc;
-    /* Linha superior */
-    padding-top: 20px;
-    /* Espaçamento interno superior */
+/* Media queries para ajustar o layout em diferentes tamanhos de tela */
+@media (max-width: 768px) {
+    body {
+        padding-top: 80px; /* Ajusta o espaçamento superior para dispositivos móveis */
+    }
+
+    .card {
+        width: 95%; /* Ajusta a largura do card para se adaptar melhor em dispositivos menores */
+        padding: 30px; /* Ajusta o padding do card em telas menores */
+    }
 }
 
-#resetCodeArea form {
-    margin-top: 20px;
-    /* Espaço entre o formulário e a mensagem de sucesso */
-}
+@media (max-width: 480px) {
+    body {
+        padding-top: 90px; /* Ajusta o espaçamento superior em telas muito pequenas */
+    }
 
-#resetSuccessMessage {
-    display: none;
-    /* Inicialmente oculto */
-    margin-top: 20px;
-    /* Espaço acima */
-    text-align: center;
-    /* Centralizar o texto */
-}
-
-#resetSuccessMessage p {
-    font-size: 18px;
-    /* Tamanho da fonte do texto de sucesso */
-    color: #008000;
-    /* Cor verde para sucesso */
-}
-
-#resetSuccessMessage button {
-    display: block;
-    /* Botão de bloco para ocupar a largura do contêiner */
-    width: 100%;
-    /* Largura total */
-    padding: 10px 0;
-    /* Preenchimento vertical */
-    margin-top: 10px;
-    /* Espaço acima */
-    background-color: #4CAF50;
-    /* Cor de fundo verde */
-    color: white;
-    /* Cor do texto branco */
-    border: none;
-    /* Sem borda */
-    border-radius: 5px;
-    /* Bordas arredondadas */
-    cursor: pointer;
-    /* Cursor apontador */
-}
-
-#resetSuccessMessage button:hover {
-    background-color: #45a049;
-    /* Cor de fundo mais escura no hover */
-}
-.error-message {
-    color: red;
-    font-size: 12px;
-    margin-top: 5px;
+    .card {
+        width: 100%; /* Faz o card ocupar a largura total em telas muito pequenas */
+        padding: 20px; /* Ajusta o padding do card em telas muito pequenas */
+    }
 }
