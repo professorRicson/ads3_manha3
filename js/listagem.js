@@ -1,78 +1,66 @@
-function loadUsers() {
-    var users = JSON.parse(localStorage.getItem("users")) || [];
-    var userList = document.getElementById("userList");
+function loadPacientes() {
+    var pacientes = JSON.parse(localStorage.getItem("pacientes")) || [];
+    var patientList = document.getElementById("patientList");
 
-    userList.innerHTML = "";
+    patientList.innerHTML = "";
 
-    users.forEach((user, index) => {
+    pacientes.forEach((paciente, index) => {
         var row = document.createElement("tr");
 
         var nomeCell = document.createElement("td");
-        nomeCell.textContent = user.firstname;
+        nomeCell.textContent = paciente.nome_usuario;
         row.appendChild(nomeCell);
 
-        var sobrenomeCell = document.createElement("td");
-        sobrenomeCell.textContent = user.lastname;
-        row.appendChild(sobrenomeCell);
+        var cidCell = document.createElement("td");
+        cidCell.textContent = paciente.cid;
+        row.appendChild(cidCell);
 
-        var emailCell = document.createElement("td");
-        emailCell.textContent = user.email;
-        row.appendChild(emailCell);
+        var dataNascimentoCell = document.createElement("td");
+        dataNascimentoCell.textContent = paciente.data_nascimento;
+        row.appendChild(dataNascimentoCell);
+
+        var nomeResponsavelCell = document.createElement("td");
+        nomeResponsavelCell.textContent = paciente.nome_responsavel;
+        row.appendChild(nomeResponsavelCell);
+
+        var vinculoFamiliarCell = document.createElement("td");
+        vinculoFamiliarCell.textContent = paciente.vinculo_familiar;
+        row.appendChild(vinculoFamiliarCell);
+
+        var telefoneCell = document.createElement("td");
+        telefoneCell.textContent = paciente.telefone;
+        row.appendChild(telefoneCell);
 
         var actionsCell = document.createElement("td");
 
         var editButton = document.createElement("button");
         editButton.textContent = "Editar";
-        editButton.onclick = function () {
-            editUser(index);
-        };
+        // Função para editar paciente (não implementada aqui)
         actionsCell.appendChild(editButton);
 
         var deleteButton = document.createElement("button");
         deleteButton.textContent = "Excluir";
         deleteButton.onclick = function () {
-            deleteUser(index);
+            deletePaciente(index);
         };
         actionsCell.appendChild(deleteButton);
 
         row.appendChild(actionsCell);
 
-        userList.appendChild(row);
+        patientList.appendChild(row);
     });
 }
 
-function editUser(index) {
-    var users = JSON.parse(localStorage.getItem("users")) || [];
-    var user = users[index];
-
-    var firstname = prompt("Digite o novo nome:", user.firstname);
-    var lastname = prompt("Digite o novo sobrenome:", user.lastname);
-    var email = prompt("Digite o novo email:", user.email);
-    var password = prompt("Digite a nova senha:", user.password);
-
-    if (firstname && lastname && email && password) {
-        user.firstname = firstname;
-        user.lastname = lastname;
-        user.email = email;
-        user.password = password;
-
-        users[index] = user;
-        localStorage.setItem("users", JSON.stringify(users));
-        loadUsers();
+function deletePaciente(index) {
+    var pacientes = JSON.parse(localStorage.getItem("pacientes")) || [];
+    if (confirm("Você tem certeza que deseja excluir este paciente?")) {
+        pacientes.splice(index, 1);
+        localStorage.setItem("pacientes", JSON.stringify(pacientes));
+        loadPacientes();
     }
 }
 
-function deleteUser(index) {
-    var users = JSON.parse(localStorage.getItem("users")) || [];
-    if (confirm("Você tem certeza que deseja excluir este usuário?")) {
-        users.splice(index, 1);
-        localStorage.setItem("users", JSON.stringify(users));
-        loadUsers();
-    }
-}
-
-window.onload = function () {
-    loadUsers();
-};
-
-
+// Carrega os pacientes ao iniciar a página
+document.addEventListener('DOMContentLoaded', () => {
+    loadPacientes();
+});

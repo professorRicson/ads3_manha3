@@ -175,3 +175,27 @@ button.delete-button:hover {
         text-align: left;
     }
 }
+
+
+.detail-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.detail-card h3 {
+    margin-top: 0;
+}
+
+.detail-card button {
+    display: block;
+    margin: 20px auto 0;
+}
