@@ -1,4 +1,5 @@
 /* Estilo geral do body */
+/* Estilo geral do body */
 body {
     background-image: url(../img/backgroud.jpeg);
     background-size: cover;
@@ -6,25 +7,26 @@ body {
     background-repeat: no-repeat;
     margin: 0;
     font-family: Arial, sans-serif;
-    padding-top: 70px; /* Espaço para a navbar fixa */
+    padding-top: 120px; /* Aumenta o espaço para a navbar fixa */
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Estilo do card */
 .card {
     width: 90%; /* Ajusta a largura do card para se adaptar em dispositivos menores */
     max-width: 500px;
-    height: auto; /* Ajusta a altura do card automaticamente */
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     text-align: center;
-    margin: 0 auto; /* Centraliza o card horizontalmente */
-    position: relative; /* Remove o posicionamento absoluto */
-    top: 20px; /* Remove a posição fixa vertical */
-    transform: none; /* Remove o efeito de transformação */
+    margin: 80px auto; /* Aumenta ainda mais o espaçamento superior */
+    flex: 1;
 }
+
+
 
 /* Estilo da imagem do card */
 .card img {

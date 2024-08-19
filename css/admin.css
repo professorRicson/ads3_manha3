@@ -10,8 +10,10 @@ body {
     background: linear-gradient(to right, #00c6ff, #0072ff); /* Gradiente de fundo moderno */
     display: flex;
     flex-direction: column;
+    padding-top: 70px; /* Espaço suficiente para a navbar fixa */
 }
 
+/* Wrapper para o conteúdo principal */
 .content-wrapper {
     flex: 1;
     display: flex;
@@ -20,24 +22,28 @@ body {
     margin-top: 20px;
 }
 
+/* Container do login */
 .login-container {
-    background: #fff;
+    background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     padding: 30px;
-    width: 100%;
-    max-width: 360px; /* Largura máxima para telas grandes */
+    width: 90%; /* Ajusta a largura para dispositivos menores */
+    max-width: 360px; /* Largura máxima para telas maiores */
     box-sizing: border-box;
     text-align: center;
     animation: fadeIn 1s ease-out;
+    margin: 100px auto; /* Centraliza horizontalmente */
 }
 
+/* Estilo do título */
 h2 {
     font-size: 1.75em;
     margin-bottom: 20px;
     color: #333;
 }
 
+/* Estilo das labels */
 label {
     display: block;
     margin-bottom: 10px;
@@ -45,6 +51,7 @@ label {
     font-weight: bold;
 }
 
+/* Estilo dos campos de input */
 input {
     width: calc(100% - 20px);
     padding: 12px;
@@ -54,6 +61,7 @@ input {
     box-sizing: border-box;
 }
 
+/* Estilo dos botões */
 button {
     background-color: #007bff;
     border: none;
@@ -93,7 +101,7 @@ button:active {
 @media (max-width: 600px) {
     .login-container {
         padding: 20px;
-        width: 90%;
+        width: 95%; /* Ajuste para telas menores */
     }
 
     h2 {
@@ -107,7 +115,7 @@ button:active {
 
 @media (max-width: 400px) {
     .login-container {
-        width: 95%;
+        width: 100%; /* Ocupa a largura total em telas muito pequenas */
     }
 
     h2 {
@@ -117,4 +125,9 @@ button:active {
     input, button {
         font-size: 12px;
     }
+}
+
+/* Mantém o estilo original do footer */
+footer {
+    /* Aqui vai o estilo do footer padrão */
 }
