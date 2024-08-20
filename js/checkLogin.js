@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function () {
     var isAdminLoggedIn = localStorage.getItem("isAdminLoggedIn");
 
     if (isAdminLoggedIn !== "true") {

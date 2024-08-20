@@ -6,23 +6,28 @@ body {
     background-repeat: no-repeat;
     margin: 0;
     font-family: Arial, sans-serif;
-    padding-top: 70px; /* Espaço suficiente para a navbar fixa */
-    min-height: 100vh; /* Garante que a página ocupe pelo menos 100% da altura da viewport */
+    padding-top: 70px;
+    /* Espaço suficiente para a navbar fixa */
+    min-height: 100vh;
+    /* Garante que a página ocupe pelo menos 100% da altura da viewport */
     display: flex;
     flex-direction: column;
 }
 
 /* Estilo do card */
 .card {
-    width: 90%; /* Ajusta a largura do card para se adaptar em dispositivos menores */
+    width: 90%;
+    /* Ajusta a largura do card para se adaptar em dispositivos menores */
     max-width: 500px;
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     text-align: center;
-    margin: 20px auto; /* Centraliza o card horizontalmente e adiciona espaço acima e abaixo */
-    position: relative; /* Remove o posicionamento absoluto */
+    margin: 20px auto;
+    /* Centraliza o card horizontalmente e adiciona espaço acima e abaixo */
+    position: relative;
+    /* Remove o posicionamento absoluto */
 }
 
 /* Estilo da imagem do card */
@@ -50,7 +55,8 @@ body {
 .card input[type="email"],
 .card input[type="password"],
 .card input[type="text"] {
-    width: calc(100% - 20px); /* Ajusta a largura do campo de input */
+    width: calc(100% - 20px);
+    /* Ajusta a largura do campo de input */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -90,32 +96,41 @@ body {
 
 /* Ajuste do espaço inferior */
 main {
-    flex: 1; /* Permite que o main expanda para ocupar o espaço disponível */
+    flex: 1;
+    /* Permite que o main expanda para ocupar o espaço disponível */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centraliza o conteúdo verticalmente */
-    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    justify-content: center;
+    /* Centraliza o conteúdo verticalmente */
+    align-items: center;
+    /* Centraliza o conteúdo horizontalmente */
 }
 
 /* Media queries para ajustar o layout em diferentes tamanhos de tela */
 @media (max-width: 768px) {
     body {
-        padding-top: 80px; /* Ajusta o espaçamento superior para dispositivos móveis */
+        padding-top: 80px;
+        /* Ajusta o espaçamento superior para dispositivos móveis */
     }
 
     .card {
-        width: 95%; /* Ajusta a largura do card para se adaptar melhor em dispositivos menores */
-        padding: 30px; /* Ajusta o padding do card em telas menores */
+        width: 95%;
+        /* Ajusta a largura do card para se adaptar melhor em dispositivos menores */
+        padding: 30px;
+        /* Ajusta o padding do card em telas menores */
     }
 }
 
 @media (max-width: 480px) {
     body {
-        padding-top: 90px; /* Ajusta o espaçamento superior em telas muito pequenas */
+        padding-top: 90px;
+        /* Ajusta o espaçamento superior em telas muito pequenas */
     }
 
     .card {
-        width: 100%; /* Faz o card ocupar a largura total em telas muito pequenas */
-        padding: 20px; /* Ajusta o padding do card em telas muito pequenas */
+        width: 100%;
+        /* Faz o card ocupar a largura total em telas muito pequenas */
+        padding: 20px;
+        /* Ajusta o padding do card em telas muito pequenas */
     }
 }

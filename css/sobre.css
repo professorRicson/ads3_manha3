@@ -1,8 +1,10 @@
 /* estilos gerais */
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
-    font-size: 16px; /* Tamanho base da fonte */
+    font-size: 16px;
+    /* Tamanho base da fonte */
 }
 
 body {
@@ -38,20 +40,28 @@ main {
 
 /* seção sobre */
 .about-section {
-    background-color: #ffffff83; /* Cor de fundo branca */
-    padding: 20px; /* Padding para espaçamento interno */
-    margin: 0; /* Remove margens externas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para destaque */
+    background-color: #ffffff83;
+    /* Cor de fundo branca */
+    padding: 20px;
+    /* Padding para espaçamento interno */
+    margin: 0;
+    /* Remove margens externas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra leve para destaque */
     text-align: center;
-    width: 100%; /* Garante que a seção ocupe toda a largura da tela */
-    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+    width: 100%;
+    /* Garante que a seção ocupe toda a largura da tela */
+    box-sizing: border-box;
+    /* Inclui padding e bordas no cálculo da largura */
 }
 
 .about-title {
     font-size: 2.5em;
-    color: #1a1a1a; /* Cor do texto */
+    color: #1a1a1a;
+    /* Cor do texto */
     margin: 0;
-    padding: 10px 0; /* Padding para espaçamento interno do título */
+    padding: 10px 0;
+    /* Padding para espaçamento interno do título */
     background: linear-gradient(90deg, #f0d436, #274688, #267696, #d81a1a);
     background-size: 200% 200%;
     -webkit-background-clip: text;
@@ -83,9 +93,11 @@ main {
     0% {
         background-position: 0% 0%;
     }
+
     50% {
         background-position: 100% 100%;
     }
+
     100% {
         background-position: 0% 0%;
     }

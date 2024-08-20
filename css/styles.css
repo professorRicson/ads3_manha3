@@ -4,8 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
-}
+
 
 .navbar {
     display: flex;
@@ -63,16 +62,16 @@ body {
         left: 0;
         background-color: #333;
     }
-    
+
     .nav-links li {
         text-align: center;
         margin: 15px 0;
     }
-    
+
     .burger {
         display: flex;
     }
-    
+
     .nav-links.active {
         display: flex;
     }

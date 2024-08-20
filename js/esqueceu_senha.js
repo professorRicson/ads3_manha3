@@ -16,11 +16,11 @@ function sendResetCode() {
     var storedUser = JSON.parse(localStorage.getItem('user'));
 
     if (storedUser && storedUser.email === email) {
-        var resetCode = generateResetCode(); 
-        localStorage.setItem('resetCode', resetCode); 
+        var resetCode = generateResetCode();
+        localStorage.setItem('resetCode', resetCode);
 
         document.getElementById("resetCodeArea").style.display = "block";
-        
+
         console.log("Código de redefinição enviado para " + email + ": " + resetCode);
     } else {
         alert("Email não encontrado.");
@@ -28,7 +28,7 @@ function sendResetCode() {
 }
 
 function generateResetCode() {
-    return Math.floor(1000 + Math.random() * 9000); 
+    return Math.floor(1000 + Math.random() * 9000);
 }
 
 function resetPassword() {

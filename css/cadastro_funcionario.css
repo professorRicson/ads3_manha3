@@ -7,7 +7,8 @@ body {
     background-repeat: no-repeat;
     margin: 0;
     font-family: Arial, sans-serif;
-    padding-top: 120px; /* Aumenta o espaço para a navbar fixa */
+    padding-top: 120px;
+    /* Aumenta o espaço para a navbar fixa */
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -15,14 +16,16 @@ body {
 
 /* Estilo do card */
 .card {
-    width: 90%; /* Ajusta a largura do card para se adaptar em dispositivos menores */
+    width: 90%;
+    /* Ajusta a largura do card para se adaptar em dispositivos menores */
     max-width: 500px;
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     text-align: center;
-    margin: 80px auto; /* Aumenta ainda mais o espaçamento superior */
+    margin: 80px auto;
+    /* Aumenta ainda mais o espaçamento superior */
     flex: 1;
 }
 
@@ -92,7 +95,8 @@ body {
 /* Estilo do link de login */
 .card .login-link {
     display: inline-block;
-    width: 100%; /* Faz o botão ocupar a largura total do card */
+    width: 100%;
+    /* Faz o botão ocupar a largura total do card */
     padding: 10px 0;
     border: none;
     border-radius: 10px;
@@ -110,22 +114,28 @@ body {
 /* Media queries para ajustar o layout em diferentes tamanhos de tela */
 @media (max-width: 768px) {
     body {
-        padding-top: 80px; /* Ajusta o espaçamento superior para dispositivos móveis */
+        padding-top: 80px;
+        /* Ajusta o espaçamento superior para dispositivos móveis */
     }
 
     .card {
-        width: 95%; /* Ajusta a largura do card para se adaptar melhor em dispositivos menores */
-        padding: 20px; /* Ajusta o padding do card em telas menores */
+        width: 95%;
+        /* Ajusta a largura do card para se adaptar melhor em dispositivos menores */
+        padding: 20px;
+        /* Ajusta o padding do card em telas menores */
     }
 }
 
 @media (max-width: 480px) {
     body {
-        padding-top: 90px; /* Ajusta o espaçamento superior em telas muito pequenas */
+        padding-top: 90px;
+        /* Ajusta o espaçamento superior em telas muito pequenas */
     }
 
     .card {
-        width: 100%; /* Faz o card ocupar a largura total em telas muito pequenas */
-        padding: 15px; /* Ajusta o padding do card em telas muito pequenas */
+        width: 100%;
+        /* Faz o card ocupar a largura total em telas muito pequenas */
+        padding: 15px;
+        /* Ajusta o padding do card em telas muito pequenas */
     }
 }

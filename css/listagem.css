@@ -40,11 +40,14 @@ table {
     margin-bottom: 20px;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid #ddd;
 }
 
-th, td {
+th,
+td {
     padding: 12px;
     text-align: left;
 }
@@ -172,7 +175,9 @@ button.more-info-button:hover {
 }
 
 @media (max-width: 992px) {
-    th, td {
+
+    th,
+    td {
         padding: 10px;
     }
 
@@ -192,7 +197,8 @@ button.more-info-button:hover {
         font-size: 1.4em;
     }
 
-    th, td {
+    th,
+    td {
         padding: 8px;
         font-size: 12px;
     }
@@ -212,7 +218,8 @@ button.more-info-button:hover {
         font-size: 1.2em;
     }
 
-    th, td {
+    th,
+    td {
         padding: 6px;
         font-size: 11px;
     }
@@ -229,7 +236,13 @@ button.more-info-button:hover {
 }
 
 @media (max-width: 400px) {
-    table, thead, tbody, th, td, tr {
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
         display: block;
     }
 

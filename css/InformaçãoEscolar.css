@@ -23,13 +23,16 @@ body {
 
 /* Estilos da Navbar */
 header {
-    height: 60px; /* Ajuste o valor conforme o tamanho da navbar */
-    background-color: #333; /* Exemplo de cor para a navbar */
+    height: 60px;
+    /* Ajuste o valor conforme o tamanho da navbar */
+    background-color: #333;
+    /* Exemplo de cor para a navbar */
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000; /* Garante que a navbar fique acima do conteúdo */
+    z-index: 1000;
+    /* Garante que a navbar fique acima do conteúdo */
 }
 
 header .menu-button {
@@ -68,7 +71,8 @@ header .menu.open {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     text-align: center;
-    margin: 125px auto 30px; /* Ajuste o margin-top para garantir que o card fique abaixo da navbar */
+    margin: 125px auto 30px;
+    /* Ajuste o margin-top para garantir que o card fique abaixo da navbar */
 }
 
 .card img {
@@ -186,7 +190,8 @@ header .menu.open {
 .back-arrow a {
     text-decoration: none;
     font-size: 32px;
-    color: #000; /* Altere a cor conforme necessário */
+    color: #000;
+    /* Altere a cor conforme necessário */
 }
 
 /* styles.css */
@@ -203,6 +208,7 @@ header .menu.open {
 
 
 @media (min-width: 768px) {
+
     .left-column,
     .right-column {
         width: 45%;
@@ -212,8 +218,10 @@ header .menu.open {
 /* Estilos para os grupos de opções verticais */
 .card .option-group-vertical {
     display: flex;
-    flex-direction: column; /* Mantém as opções em uma coluna */
-    align-items: flex-start; /* Alinha as opções ao início do contêiner */
+    flex-direction: column;
+    /* Mantém as opções em uma coluna */
+    align-items: flex-start;
+    /* Alinha as opções ao início do contêiner */
     margin-bottom: 20px;
 }
 

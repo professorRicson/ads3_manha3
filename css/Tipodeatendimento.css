@@ -12,13 +12,16 @@ body {
 
 header {
     /* Ajuste a altura da navbar conforme necessário */
-    height: 60px; /* Ajuste o valor conforme o tamanho da navbar */
-    background-color: #333; /* Exemplo de cor para a navbar */
+    height: 60px;
+    /* Ajuste o valor conforme o tamanho da navbar */
+    background-color: #333;
+    /* Exemplo de cor para a navbar */
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000; /* Garante que a navbar fique acima do conteúdo */
+    z-index: 1000;
+    /* Garante que a navbar fique acima do conteúdo */
 }
 
 header .menu-button {
@@ -49,15 +52,18 @@ header .menu.open {
 }
 
 .card {
-    width: 90%; /* Ajuste para responsividade */
+    width: 90%;
+    /* Ajuste para responsividade */
     max-width: 600px;
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     text-align: center;
-    margin: 80px auto 30px; /* Ajuste o valor do margin-top para garantir que a card fique abaixo da navbar */
-    position: relative; /* Permite ajustar a posição em relação ao seu pai */
+    margin: 80px auto 30px;
+    /* Ajuste o valor do margin-top para garantir que a card fique abaixo da navbar */
+    position: relative;
+    /* Permite ajustar a posição em relação ao seu pai */
 }
 
 .card img {
@@ -80,7 +86,8 @@ header .menu.open {
 .card h3 {
     font-size: 20px;
     color: #000000;
-    margin: 20px 0; /* Espaçamento entre o subtítulo e o formulário */
+    margin: 20px 0;
+    /* Espaçamento entre o subtítulo e o formulário */
 }
 
 .card .input-wrapper {
@@ -119,19 +126,22 @@ header .menu.open {
 
 .card .radio-group {
     display: flex;
-    gap: 5px; /* Espaçamento entre os botões Sim e Não */
+    gap: 5px;
+    /* Espaçamento entre os botões Sim e Não */
     align-items: center;
     justify-content: flex-start;
 }
 
 .card .radio-group label {
-    margin: 0; /* Remove a margem entre os rótulos */
+    margin: 0;
+    /* Remove a margem entre os rótulos */
     font-size: 14px;
     color: #555;
 }
 
 .card .radio-group input[type="radio"] {
-    margin: 0; /* Remove a margem dos botões de rádio */
+    margin: 0;
+    /* Remove a margem dos botões de rádio */
 }
 
 .card .login-link {
@@ -165,7 +175,8 @@ header .menu.open {
 .back-arrow a {
     text-decoration: none;
     font-size: 32px;
-    color: #000; /* Altere a cor conforme necessário */
+    color: #000;
+    /* Altere a cor conforme necessário */
 }
 
 /* styles.css */

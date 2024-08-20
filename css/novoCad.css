@@ -6,7 +6,8 @@ body {
     background-position: center;
     margin: 0;
     font-family: Arial, sans-serif;
-    padding-top: 70px; /* Espaço para a navbar fixa */
+    padding-top: 70px;
+    /* Espaço para a navbar fixa */
     height: 100vh;
 }
 
@@ -16,7 +17,8 @@ body {
     border-radius: 8px;
     padding: 20px;
     max-width: 800px;
-    margin: 80px auto 30px; /* Adiciona 50px de margem superior */
+    margin: 80px auto 30px;
+    /* Adiciona 50px de margem superior */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -43,14 +45,16 @@ h3 {
 }
 
 .input-wrapper span {
-    display: block;/* Estilos para a imagem de fundo */
+    display: block;
+
+    /* Estilos para a imagem de fundo */
     body {
         background: url('img/APAE-Horizontal-png.png') no-repeat center center fixed;
         background-size: cover;
         margin: 0;
         font-family: Arial, sans-serif;
     }
-    
+
     .card {
         background-color: rgba(255, 255, 255, 0.8);
         margin: 20px auto;
@@ -59,18 +63,20 @@ h3 {
         max-width: 800px;
         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
     }
-    
+
     .container {
         text-align: center;
     }
-    
+
     .back-arrow a {
         font-size: 24px;
         text-decoration: none;
         color: #333;
     }
-    
-    input, select, textarea {
+
+    input,
+    select,
+    textarea {
         width: 100%;
         padding: 10px;
         margin-top: 5px;
@@ -79,7 +85,7 @@ h3 {
         border: 1px solid #ccc;
         box-sizing: border-box;
     }
-    
+
     button.login-link {
         width: 100%;
         padding: 15px;
@@ -90,39 +96,40 @@ h3 {
         cursor: pointer;
         font-size: 16px;
     }
-    
+
     button.login-link:hover {
         background-color: #45a049;
     }
-    
-    .option-group, .option-group-vertical {
+
+    .option-group,
+    .option-group-vertical {
         display: flex;
         justify-content: space-between;
     }
-    
+
     .option-group-vertical {
         flex-direction: column;
     }
-    
+
     .grid-container {
         display: flex;
         justify-content: space-between;
     }
-    
+
     .grid-container .column {
         width: 48%;
     }
-    
+
     @media screen and (max-width: 768px) {
         .grid-container {
             flex-direction: column;
         }
-    
+
         .grid-container .column {
             width: 100%;
         }
     }
-    
+
     /* Estilos para o rodapé */
     #footer-placeholder {
         background-color: #333;
@@ -133,11 +140,11 @@ h3 {
         bottom: 0;
         width: 100%;
     }
-    
+
     #footer-placeholder p {
         margin: 0;
     }
-    
+
     margin-bottom: 5px;
     color: #555;
 }
@@ -165,11 +172,14 @@ h3 {
     justify-content: space-between;
 }
 
-.left-column, .right-column {
+.left-column,
+.right-column {
     width: 48%;
 }
 
-.option-group, .option-group-vertical, .radio-group {
+.option-group,
+.option-group-vertical,
+.radio-group {
     display: flex;
     gap: 15px;
 }

@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         detailCard.style.display = 'block';
     }
 
-    window.closeDetails = function() {
+    window.closeDetails = function () {
         const detailCard = document.getElementById("detail-card");
         detailCard.style.display = 'none';
     }
