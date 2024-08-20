@@ -4,7 +4,6 @@ body {
     height: 100%;
     margin: 0;
     font-size: 16px;
-    /* Tamanho base da fonte */
 }
 
 body {
@@ -41,27 +40,19 @@ main {
 /* seção sobre */
 .about-section {
     background-color: #ffffff83;
-    /* Cor de fundo branca */
     padding: 20px;
-    /* Padding para espaçamento interno */
     margin: 0;
-    /* Remove margens externas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Sombra leve para destaque */
     text-align: center;
     width: 100%;
-    /* Garante que a seção ocupe toda a largura da tela */
     box-sizing: border-box;
-    /* Inclui padding e bordas no cálculo da largura */
 }
 
 .about-title {
     font-size: 2.5em;
     color: #1a1a1a;
-    /* Cor do texto */
     margin: 0;
     padding: 10px 0;
-    /* Padding para espaçamento interno do título */
     background: linear-gradient(90deg, #f0d436, #274688, #267696, #d81a1a);
     background-size: 200% 200%;
     -webkit-background-clip: text;
@@ -78,17 +69,75 @@ main {
     margin-top: 20px;
     font-size: 1em;
     color: #000;
+    text-align: justify;
 }
 
 .about-content ul {
     list-style: none;
     padding: 0;
+    text-align: justify;
 }
 
 .about-content ul li {
     margin: 5px 0;
 }
 
+/* Galeria de Imagens */
+.gallery-section {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.gallery-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery-content img {
+    max-width: 30%;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Doações */
+.donation-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.donate-button {
+    background-color: #267696;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.donate-button:hover {
+    background-color: #274688;
+}
+
+/* Mapa */
+.map-section {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+#map {
+    width: 100%;
+    height: 300px;
+    background-color: #eaeaea;
+}
+
+/* Animação do título */
 @keyframes gradient {
     0% {
         background-position: 0% 0%;
