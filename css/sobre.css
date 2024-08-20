@@ -82,24 +82,33 @@ main {
     margin: 5px 0;
 }
 
-/* Galeria de Imagens */
-.gallery-section {
+/* Seção Funcionários */
+.staff-section {
     padding: 20px;
     text-align: center;
     width: 100%;
 }
 
-.gallery-content {
+.staff-content {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.gallery-content img {
+.staff-member {
     max-width: 30%;
     margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.staff-member img {
+    width: 100%;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.staff-member p {
+    margin: 5px 0;
 }
 
 /* Doações */
