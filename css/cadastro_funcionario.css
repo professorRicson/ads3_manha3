@@ -24,7 +24,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     text-align: center;
-    margin: 80px auto;
+    margin: 10px auto;
     /* Aumenta ainda mais o espaçamento superior */
     flex: 1;
 }

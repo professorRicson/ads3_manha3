@@ -128,3 +128,49 @@ body {
 main {
   margin-top: 70px;
 }
+
+.user-info {
+  position: relative;
+}
+
+.user-info #user-name {
+  color: #ffffff;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.user-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #ffffff;
+  color: #000000;
+  list-style: none;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+.user-menu li {
+  margin: 5px 0;
+}
+
+.user-menu a {
+  color: #000000;
+  text-decoration: none;
+  display: block;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.user-menu a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.user-info:hover .user-menu {
+  display: block;
+  opacity: 1;
+}
