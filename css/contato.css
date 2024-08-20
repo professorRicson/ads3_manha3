@@ -1,5 +1,5 @@
 body {
-    background-image: url(../img/backgroud.jpeg);
+    background-image: url('../img/backgroud.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -10,6 +10,7 @@ body {
 
 .contact-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
     padding: 50px;
@@ -22,11 +23,13 @@ body {
     padding: 20px;
     width: 45%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
 }
 
 .contact-details h3, .contact-form h2 {
     margin-bottom: 10px;
 }
+
 .contact-details h3{
     margin-top: 15px;
 }
@@ -61,4 +64,30 @@ button {
 
 button:hover {
     background-color: #45a049;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .contact-info, .contact-form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .contact-info, .contact-form {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
 }
