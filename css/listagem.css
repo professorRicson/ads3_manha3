@@ -1,5 +1,12 @@
 /* listagem.css */
 
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -8,8 +15,8 @@ body {
 }
 
 .container {
-    width: 80%;
-    margin: auto;
+    width: 90%;
+    margin: 20px auto;
     padding: 20px;
 }
 
@@ -85,14 +92,82 @@ button.delete-button:hover {
     background-color: #c82333;
 }
 
+button.more-info-button {
+    background-color: #17a2b8;
+}
+
+button.more-info-button:hover {
+    background-color: #117a8b;
+}
+
 .actions {
     margin-top: 20px;
 }
 
+.detail-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+    overflow-y: auto;
+}
+
+.detail-card h3 {
+    margin-top: 0;
+    font-size: 1.6em;
+    color: #333;
+}
+
+.detail-card .details-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.detail-card .details-grid .detail-item {
+    flex: 1 1 calc(50% - 20px);
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.detail-card .details-grid .detail-item p {
+    margin: 0;
+}
+
+.detail-card .details-grid .detail-item strong {
+    color: #007bff;
+}
+
+.detail-card button {
+    display: block;
+    margin: 20px auto 0;
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.detail-card button:hover {
+    background-color: #c82333;
+}
+
 /* Responsividade */
+
 @media (max-width: 1200px) {
     .container {
-        width: 90%;
+        width: 95%;
     }
 }
 
@@ -109,7 +184,8 @@ button.delete-button:hover {
 
 @media (max-width: 768px) {
     .container {
-        width: 95%;
+        width: 100%;
+        padding: 10px;
     }
 
     h2 {
@@ -165,37 +241,16 @@ button.delete-button:hover {
         padding: 10px;
         position: relative;
         text-align: right;
+        border: none;
     }
 
     td::before {
         content: attr(data-label);
         position: absolute;
-        left: 10px;
+        left: 0;
         font-weight: bold;
         text-align: left;
+        width: 50%;
+        white-space: nowrap;
     }
-}
-
-
-.detail-card {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 600px;
-    padding: 20px;
-    background-color: white;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-}
-
-.detail-card h3 {
-    margin-top: 0;
-}
-
-.detail-card button {
-    display: block;
-    margin: 20px auto 0;
 }
