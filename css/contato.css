@@ -25,17 +25,21 @@ body {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     padding: 20px;
-    width: 45%;
+    width: 45%; /* Mantém o tamanho da tela conforme o original */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
 }
 
 .contact-details h3, .contact-form h2 {
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* Ajuste para mais espaço abaixo dos títulos */
+    font-size: 18px; /* Tamanho da fonte padronizado */
+    color: #444;
 }
 
 .contact-details p, .input-wrapper {
     margin-bottom: 15px;
+    font-size: 14px;
+    color: #333;
 }
 
 .input-wrapper label {
@@ -50,6 +54,7 @@ body {
     border-radius: 5px;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    font-size: 14px;
 }
 
 button {
@@ -60,6 +65,8 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -75,7 +82,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    margin-top: auto; /* Garante que o rodapé fique no final da página */
+    margin-top: auto;
 }
 
 /* Responsividade */
@@ -100,6 +107,6 @@ footer {
     }
 
     button {
-        width: 100%;
+        padding: 12px 20px;
     }
 }
