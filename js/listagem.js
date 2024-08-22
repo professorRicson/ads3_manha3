@@ -1,6 +1,78 @@
 document.addEventListener('DOMContentLoaded', () => {
     loadPacientes();
+    loadFuncionarios();
 
+    // Função para carregar e exibir a lista de funcionários
+    function loadFuncionarios() {
+        var funcionarios = JSON.parse(localStorage.getItem("users")) || [];
+        var userList = document.getElementById("userList");
+
+        userList.innerHTML = "";
+
+        funcionarios.forEach((funcionario, index) => {
+            var row = document.createElement("tr");
+
+            var nomeCell = document.createElement("td");
+            nomeCell.textContent = funcionario.firstname;
+            row.appendChild(nomeCell);
+
+            var sobrenomeCell = document.createElement("td");
+            sobrenomeCell.textContent = funcionario.lastname;
+            row.appendChild(sobrenomeCell);
+
+            var emailCell = document.createElement("td");
+            emailCell.textContent = funcionario.email;
+            row.appendChild(emailCell);
+
+            var actionsCell = document.createElement("td");
+
+            var editButton = document.createElement("button");
+            editButton.textContent = "Editar";
+            editButton.className = "edit-button";
+            editButton.onclick = function () {
+                // Implementar lógica de edição se necessário
+                editFuncionario(index);
+            };
+            actionsCell.appendChild(editButton);
+
+            var deleteButton = document.createElement("button");
+            deleteButton.textContent = "Excluir";
+            deleteButton.className = "delete-button";
+            deleteButton.onclick = function () {
+                deleteFuncionario(index);
+            };
+            actionsCell.appendChild(deleteButton);
+
+            row.appendChild(actionsCell);
+            userList.appendChild(row);
+        });
+    }
+
+    // Função para excluir um funcionário
+    function deleteFuncionario(index) {
+        let funcionarios = JSON.parse(localStorage.getItem("users")) || [];
+        funcionarios.splice(index, 1);
+        localStorage.setItem("users", JSON.stringify(funcionarios));
+        loadFuncionarios();
+    }
+
+    // Função para editar um funcionário
+    // Função para editar um funcionário
+    function editFuncionario(index) {
+        let funcionarios = JSON.parse(localStorage.getItem("users")) || [];
+        let funcionario = funcionarios[index];
+
+        // Redirecionar para a página de cadastro com os dados do funcionário como parâmetros na URL
+        const url = new URL('cadastro.html', window.location.href);
+        url.searchParams.set('id', index);
+        url.searchParams.set('firstname', funcionario.firstname);
+        url.searchParams.set('lastname', funcionario.lastname);
+        url.searchParams.set('email', funcionario.email);
+        window.location.href = url.toString();
+    }
+
+
+    // Função para carregar e exibir a lista de pacientes
     function loadPacientes() {
         var pacientes = JSON.parse(localStorage.getItem("pacientes")) || [];
         var patientList = document.getElementById("patientList");
@@ -39,7 +111,10 @@ document.addEventListener('DOMContentLoaded', () => {
             var editButton = document.createElement("button");
             editButton.textContent = "Editar";
             editButton.className = "edit-button";
-            // Adicione a funcionalidade para o botão Editar se necessário
+            editButton.onclick = function () {
+                // Implementar lógica de edição se necessário
+                editPaciente(index);
+            };
             actionsCell.appendChild(editButton);
 
             var deleteButton = document.createElement("button");
@@ -63,6 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Função para excluir um paciente
     function deletePaciente(index) {
         let pacientes = JSON.parse(localStorage.getItem("pacientes")) || [];
         pacientes.splice(index, 1);
@@ -70,6 +146,16 @@ document.addEventListener('DOMContentLoaded', () => {
         loadPacientes();
     }
 
+    // Função para editar um paciente
+    function editPaciente(index) {
+        let pacientes = JSON.parse(localStorage.getItem("pacientes")) || [];
+        let paciente = pacientes[index];
+
+        // A lógica para edição pode ser adicionada aqui, como redirecionar para uma página de edição
+        console.log('Editar paciente:', paciente);
+    }
+
+    // Função para mostrar detalhes do paciente
     function showDetails(paciente) {
         const detailCard = document.getElementById("detail-card");
         const detailContent = document.getElementById("detail-content");
@@ -108,6 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
         detailCard.style.display = 'block';
     }
 
+    // Função para fechar o card de detalhes
     window.closeDetails = function () {
         const detailCard = document.getElementById("detail-card");
         detailCard.style.display = 'none';
